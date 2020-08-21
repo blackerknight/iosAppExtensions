@@ -1,0 +1,6 @@
+lane :beta do
+  build_app(
+    scheme: "SimpleApp",
+    include_bitcode: true
+  )
+end

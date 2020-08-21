@@ -8,22 +8,86 @@
 
 /* Begin PBXBuildFile section */
 		6D54890E24A63B7600EB8BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54890D24A63B7600EB8BAA /* AppDelegate.swift */; };
-		6D54891024A63B7600EB8BAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54890F24A63B7600EB8BAA /* SceneDelegate.swift */; };
 		6D54891224A63B7600EB8BAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54891124A63B7600EB8BAA /* ViewController.swift */; };
 		6D54891524A63B7600EB8BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D54891324A63B7600EB8BAA /* Main.storyboard */; };
 		6D54891724A63B7D00EB8BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D54891624A63B7D00EB8BAA /* Assets.xcassets */; };
 		6D54891A24A63B7D00EB8BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D54891824A63B7D00EB8BAA /* LaunchScreen.storyboard */; };
+		6DFDC7E024ED94FB00715E18 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDC7DF24ED94FB00715E18 /* NotificationCenter.framework */; };
+		6DFDC7E324ED94FB00715E18 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDC7E224ED94FB00715E18 /* TodayViewController.swift */; };
+		6DFDC7E624ED94FB00715E18 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDC7E424ED94FB00715E18 /* MainInterface.storyboard */; };
+		6DFDC7EA24ED94FB00715E18 /* SimpleAppExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6DFDC7DD24ED94FB00715E18 /* SimpleAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6DFDC80924EDAC3000715E18 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDC7F624EDABE400715E18 /* ReplayKit.framework */; };
+		6DFDC80C24EDAC3000715E18 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDC80B24EDAC3000715E18 /* SampleHandler.swift */; };
+		6DFDC81324EDAC3000715E18 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDC7F624EDABE400715E18 /* ReplayKit.framework */; };
+		6DFDC81424EDAC3000715E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDC7F824EDABE400715E18 /* UIKit.framework */; };
+		6DFDC81724EDAC3000715E18 /* BroadcastSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDC81624EDAC3000715E18 /* BroadcastSetupViewController.swift */; };
+		6DFDC81B24EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6DFDC81224EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6DFDC81E24EDAC3000715E18 /* SimpleAppBroadCastUploadExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6DFDC80824EDAC3000715E18 /* SimpleAppBroadCastUploadExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DFDC7E824ED94FB00715E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D54890224A63B7600EB8BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DFDC7DC24ED94FB00715E18;
+			remoteInfo = SimpleAppExtension;
+		};
+		6DFDC81924EDAC3000715E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D54890224A63B7600EB8BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DFDC81124EDAC3000715E18;
+			remoteInfo = SimpleAppBroadCastUploadExtensionSetupUI;
+		};
+		6DFDC81C24EDAC3000715E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D54890224A63B7600EB8BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DFDC80724EDAC3000715E18;
+			remoteInfo = SimpleAppBroadCastUploadExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DFDC7EE24ED94FB00715E18 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6DFDC7EA24ED94FB00715E18 /* SimpleAppExtension.appex in Embed App Extensions */,
+				6DFDC81B24EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex in Embed App Extensions */,
+				6DFDC81E24EDAC3000715E18 /* SimpleAppBroadCastUploadExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6D54890A24A63B7600EB8BAA /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D54890D24A63B7600EB8BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D54890F24A63B7600EB8BAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D54891124A63B7600EB8BAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D54891424A63B7600EB8BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D54891624A63B7D00EB8BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D54891924A63B7D00EB8BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D54891B24A63B7D00EB8BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DFDC7DD24ED94FB00715E18 /* SimpleAppExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleAppExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DFDC7DF24ED94FB00715E18 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6DFDC7E224ED94FB00715E18 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		6DFDC7E524ED94FB00715E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6DFDC7E724ED94FB00715E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DFDC7EF24ED978200715E18 /* SimpleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleApp.entitlements; sourceTree = "<group>"; };
+		6DFDC7F024EDA7F600715E18 /* SimpleAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleAppExtension.entitlements; sourceTree = "<group>"; };
+		6DFDC7F624EDABE400715E18 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		6DFDC7F824EDABE400715E18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6DFDC80824EDAC3000715E18 /* SimpleAppBroadCastUploadExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleAppBroadCastUploadExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DFDC80B24EDAC3000715E18 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		6DFDC80D24EDAC3000715E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DFDC81224EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleAppBroadCastUploadExtensionSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DFDC81624EDAC3000715E18 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
+		6DFDC81824EDAC3000715E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +98,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DFDC7DA24ED94FB00715E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC7E024ED94FB00715E18 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC80524EDAC3000715E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC80924EDAC3000715E18 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC80F24EDAC3000715E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC81324EDAC3000715E18 /* ReplayKit.framework in Frameworks */,
+				6DFDC81424EDAC3000715E18 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				6D54890C24A63B7600EB8BAA /* SimpleApp */,
+				6DFDC7E124ED94FB00715E18 /* SimpleAppExtension */,
+				6DFDC80A24EDAC3000715E18 /* SimpleAppBroadCastUploadExtension */,
+				6DFDC81524EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI */,
+				6DFDC7DE24ED94FB00715E18 /* Frameworks */,
 				6D54890B24A63B7600EB8BAA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				6D54890A24A63B7600EB8BAA /* SimpleApp.app */,
+				6DFDC7DD24ED94FB00715E18 /* SimpleAppExtension.appex */,
+				6DFDC80824EDAC3000715E18 /* SimpleAppBroadCastUploadExtension.appex */,
+				6DFDC81224EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,8 +152,8 @@
 		6D54890C24A63B7600EB8BAA /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				6DFDC7EF24ED978200715E18 /* SimpleApp.entitlements */,
 				6D54890D24A63B7600EB8BAA /* AppDelegate.swift */,
-				6D54890F24A63B7600EB8BAA /* SceneDelegate.swift */,
 				6D54891124A63B7600EB8BAA /* ViewController.swift */,
 				6D54891324A63B7600EB8BAA /* Main.storyboard */,
 				6D54891624A63B7D00EB8BAA /* Assets.xcassets */,
@@ -65,6 +161,45 @@
 				6D54891B24A63B7D00EB8BAA /* Info.plist */,
 			);
 			path = SimpleApp;
+			sourceTree = "<group>";
+		};
+		6DFDC7DE24ED94FB00715E18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDC7DF24ED94FB00715E18 /* NotificationCenter.framework */,
+				6DFDC7F624EDABE400715E18 /* ReplayKit.framework */,
+				6DFDC7F824EDABE400715E18 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DFDC7E124ED94FB00715E18 /* SimpleAppExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDC7F024EDA7F600715E18 /* SimpleAppExtension.entitlements */,
+				6DFDC7E224ED94FB00715E18 /* TodayViewController.swift */,
+				6DFDC7E424ED94FB00715E18 /* MainInterface.storyboard */,
+				6DFDC7E724ED94FB00715E18 /* Info.plist */,
+			);
+			path = SimpleAppExtension;
+			sourceTree = "<group>";
+		};
+		6DFDC80A24EDAC3000715E18 /* SimpleAppBroadCastUploadExtension */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDC80B24EDAC3000715E18 /* SampleHandler.swift */,
+				6DFDC80D24EDAC3000715E18 /* Info.plist */,
+			);
+			path = SimpleAppBroadCastUploadExtension;
+			sourceTree = "<group>";
+		};
+		6DFDC81524EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDC81624EDAC3000715E18 /* BroadcastSetupViewController.swift */,
+				6DFDC81824EDAC3000715E18 /* Info.plist */,
+			);
+			path = SimpleAppBroadCastUploadExtensionSetupUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +212,70 @@
 				6D54890624A63B7600EB8BAA /* Sources */,
 				6D54890724A63B7600EB8BAA /* Frameworks */,
 				6D54890824A63B7600EB8BAA /* Resources */,
+				6DFDC7EE24ED94FB00715E18 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6DFDC7E924ED94FB00715E18 /* PBXTargetDependency */,
+				6DFDC81A24EDAC3000715E18 /* PBXTargetDependency */,
+				6DFDC81D24EDAC3000715E18 /* PBXTargetDependency */,
 			);
 			name = SimpleApp;
 			productName = SimpleApp;
 			productReference = 6D54890A24A63B7600EB8BAA /* SimpleApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6DFDC7DC24ED94FB00715E18 /* SimpleAppExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DFDC7EB24ED94FB00715E18 /* Build configuration list for PBXNativeTarget "SimpleAppExtension" */;
+			buildPhases = (
+				6DFDC7D924ED94FB00715E18 /* Sources */,
+				6DFDC7DA24ED94FB00715E18 /* Frameworks */,
+				6DFDC7DB24ED94FB00715E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleAppExtension;
+			productName = SimpleAppExtension;
+			productReference = 6DFDC7DD24ED94FB00715E18 /* SimpleAppExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6DFDC80724EDAC3000715E18 /* SimpleAppBroadCastUploadExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DFDC82224EDAC3000715E18 /* Build configuration list for PBXNativeTarget "SimpleAppBroadCastUploadExtension" */;
+			buildPhases = (
+				6DFDC80424EDAC3000715E18 /* Sources */,
+				6DFDC80524EDAC3000715E18 /* Frameworks */,
+				6DFDC80624EDAC3000715E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleAppBroadCastUploadExtension;
+			productName = SimpleAppBroadCastUploadExtension;
+			productReference = 6DFDC80824EDAC3000715E18 /* SimpleAppBroadCastUploadExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6DFDC81124EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DFDC81F24EDAC3000715E18 /* Build configuration list for PBXNativeTarget "SimpleAppBroadCastUploadExtensionSetupUI" */;
+			buildPhases = (
+				6DFDC80E24EDAC3000715E18 /* Sources */,
+				6DFDC80F24EDAC3000715E18 /* Frameworks */,
+				6DFDC81024EDAC3000715E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleAppBroadCastUploadExtensionSetupUI;
+			productName = SimpleAppBroadCastUploadExtensionSetupUI;
+			productReference = 6DFDC81224EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,12 +283,21 @@
 		6D54890224A63B7600EB8BAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "eduardo mancilla";
 				TargetAttributes = {
 					6D54890924A63B7600EB8BAA = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					6DFDC7DC24ED94FB00715E18 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					6DFDC80724EDAC3000715E18 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					6DFDC81124EDAC3000715E18 = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
@@ -116,6 +315,9 @@
 			projectRoot = "";
 			targets = (
 				6D54890924A63B7600EB8BAA /* SimpleApp */,
+				6DFDC7DC24ED94FB00715E18 /* SimpleAppExtension */,
+				6DFDC80724EDAC3000715E18 /* SimpleAppBroadCastUploadExtension */,
+				6DFDC81124EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +333,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DFDC7DB24ED94FB00715E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC7E624ED94FB00715E18 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC80624EDAC3000715E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC81024EDAC3000715E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,11 +364,52 @@
 			files = (
 				6D54891224A63B7600EB8BAA /* ViewController.swift in Sources */,
 				6D54890E24A63B7600EB8BAA /* AppDelegate.swift in Sources */,
-				6D54891024A63B7600EB8BAA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC7D924ED94FB00715E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC7E324ED94FB00715E18 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC80424EDAC3000715E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC80C24EDAC3000715E18 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDC80E24EDAC3000715E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDC81724EDAC3000715E18 /* BroadcastSetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DFDC7E924ED94FB00715E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DFDC7DC24ED94FB00715E18 /* SimpleAppExtension */;
+			targetProxy = 6DFDC7E824ED94FB00715E18 /* PBXContainerItemProxy */;
+		};
+		6DFDC81A24EDAC3000715E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DFDC81124EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI */;
+			targetProxy = 6DFDC81924EDAC3000715E18 /* PBXContainerItemProxy */;
+		};
+		6DFDC81D24EDAC3000715E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DFDC80724EDAC3000715E18 /* SimpleAppBroadCastUploadExtension */;
+			targetProxy = 6DFDC81C24EDAC3000715E18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6D54891324A63B7600EB8BAA /* Main.storyboard */ = {
@@ -161,6 +426,14 @@
 				6D54891924A63B7D00EB8BAA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6DFDC7E424ED94FB00715E18 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DFDC7E524ED94FB00715E18 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -216,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,7 +556,9 @@
 		6D54891F24A63B7D00EB8BAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleApp/SimpleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleApp/Info.plist;
@@ -301,7 +576,9 @@
 		6D54892024A63B7D00EB8BAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleApp/SimpleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleApp/Info.plist;
@@ -311,6 +588,132 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6DFDC7EC24ED94FB00715E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleAppExtension/SimpleAppExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XG3ZS46L8;
+				INFOPLIST_FILE = SimpleAppExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp.SimpleAppExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DFDC7ED24ED94FB00715E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleAppExtension/SimpleAppExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XG3ZS46L8;
+				INFOPLIST_FILE = SimpleAppExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp.SimpleAppExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6DFDC82024EDAC3000715E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XG3ZS46L8;
+				INFOPLIST_FILE = SimpleAppBroadCastUploadExtensionSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp.SimpleAppBroadCastUploadExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DFDC82124EDAC3000715E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XG3ZS46L8;
+				INFOPLIST_FILE = SimpleAppBroadCastUploadExtensionSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp.SimpleAppBroadCastUploadExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6DFDC82324EDAC3000715E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XG3ZS46L8;
+				INFOPLIST_FILE = SimpleAppBroadCastUploadExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp.SimpleAppBroadCastUploadExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6DFDC82424EDAC3000715E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XG3ZS46L8;
+				INFOPLIST_FILE = SimpleAppBroadCastUploadExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = black.dev.SimpleApp.SimpleAppBroadCastUploadExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +736,33 @@
 			buildConfigurations = (
 				6D54891F24A63B7D00EB8BAA /* Debug */,
 				6D54892024A63B7D00EB8BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DFDC7EB24ED94FB00715E18 /* Build configuration list for PBXNativeTarget "SimpleAppExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFDC7EC24ED94FB00715E18 /* Debug */,
+				6DFDC7ED24ED94FB00715E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DFDC81F24EDAC3000715E18 /* Build configuration list for PBXNativeTarget "SimpleAppBroadCastUploadExtensionSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFDC82024EDAC3000715E18 /* Debug */,
+				6DFDC82124EDAC3000715E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DFDC82224EDAC3000715E18 /* Build configuration list for PBXNativeTarget "SimpleAppBroadCastUploadExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFDC82324EDAC3000715E18 /* Debug */,
+				6DFDC82424EDAC3000715E18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
