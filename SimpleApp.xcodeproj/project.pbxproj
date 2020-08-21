@@ -88,6 +88,8 @@
 		6DFDC81224EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleAppBroadCastUploadExtensionSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFDC81624EDAC3000715E18 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
 		6DFDC81824EDAC3000715E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD29F6224F07A9C0087AEF4 /* SimpleAppBroadCastUploadExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleAppBroadCastUploadExtension.entitlements; sourceTree = "<group>"; };
+		CFD29F6324F07AB80087AEF4 /* SimpleAppBroadCastUploadExtensionSetupUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleAppBroadCastUploadExtensionSetupUI.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		6DFDC80A24EDAC3000715E18 /* SimpleAppBroadCastUploadExtension */ = {
 			isa = PBXGroup;
 			children = (
+				CFD29F6224F07A9C0087AEF4 /* SimpleAppBroadCastUploadExtension.entitlements */,
 				6DFDC80B24EDAC3000715E18 /* SampleHandler.swift */,
 				6DFDC80D24EDAC3000715E18 /* Info.plist */,
 			);
@@ -196,6 +199,7 @@
 		6DFDC81524EDAC3000715E18 /* SimpleAppBroadCastUploadExtensionSetupUI */ = {
 			isa = PBXGroup;
 			children = (
+				CFD29F6324F07AB80087AEF4 /* SimpleAppBroadCastUploadExtensionSetupUI.entitlements */,
 				6DFDC81624EDAC3000715E18 /* BroadcastSetupViewController.swift */,
 				6DFDC81824EDAC3000715E18 /* Info.plist */,
 			);
@@ -600,7 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleAppExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleAppExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -638,10 +642,11 @@
 		6DFDC82024EDAC3000715E18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleAppBroadCastUploadExtensionSetupUI/SimpleAppBroadCastUploadExtensionSetupUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleAppBroadCastUploadExtensionSetupUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,10 +663,11 @@
 		6DFDC82124EDAC3000715E18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleAppBroadCastUploadExtensionSetupUI/SimpleAppBroadCastUploadExtensionSetupUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleAppBroadCastUploadExtensionSetupUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,11 +684,12 @@
 		6DFDC82324EDAC3000715E18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleAppBroadCastUploadExtension/SimpleAppBroadCastUploadExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleAppBroadCastUploadExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -700,11 +707,12 @@
 		6DFDC82424EDAC3000715E18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleAppBroadCastUploadExtension/SimpleAppBroadCastUploadExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleAppBroadCastUploadExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

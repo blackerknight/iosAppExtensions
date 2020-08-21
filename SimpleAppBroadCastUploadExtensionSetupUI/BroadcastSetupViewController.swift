@@ -7,6 +7,7 @@
 //
 
 import ReplayKit
+import os
 
 class BroadcastSetupViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class BroadcastSetupViewController: UIViewController {
         // Dictionary with setup information that will be provided to broadcast extension when broadcast is started
         let setupInfo: [String : NSCoding & NSObjectProtocol] = ["broadcastName": "example" as NSCoding & NSObjectProtocol]
         
-        print("setup config broad cast")
+        os_log("setup config broad cast")
         
         // Tell ReplayKit that the extension is finished setting up and can begin broadcasting
         self.extensionContext?.completeRequest(withBroadcast: broadcastURL!, setupInfo: setupInfo)
@@ -28,7 +29,7 @@ class BroadcastSetupViewController: UIViewController {
         let error = NSError(domain: "YouAppDomain", code: -1, userInfo: nil)
         // Tell ReplayKit that the extension was cancelled by the user
         
-        print("cancel broad cast")
+        os_log("cancel broad cast")
         
         self.extensionContext?.cancelRequest(withError: error)
     }
