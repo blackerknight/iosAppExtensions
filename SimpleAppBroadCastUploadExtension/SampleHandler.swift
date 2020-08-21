@@ -15,7 +15,7 @@ class SampleHandler: RPBroadcastSampleHandler {
     var videoOutputFullFileName: String?
     var isRecordingVideo: Bool = false
     var videoWriterInput: AVAssetWriterInput?
-    var audioWriterInput: AVAssetWriterInput?
+//    var audioWriterInput: AVAssetWriterInput?
     var videoWriter: AVAssetWriter?
     var lastSampleTime: CMTime?
     
@@ -36,8 +36,14 @@ class SampleHandler: RPBroadcastSampleHandler {
         //            session.broadcastDescription.iOSScreenBroadcast = true
         //        }
         
+        let groupDefaults = UserDefaults(suiteName: "group.com.blacker.extension")
+        guard let videoName = groupDefaults?.value(forKey: "video_name") as? String else {
+            NSLog("no existe la clave video_name")
+            return
+        }
+        
         guard let urlFolder = getSharedFolder(namefile: "Records") else { return }
-        let fileUrl = urlFolder.appendingPathComponent("test_capture_video.mp4")
+        let fileUrl = urlFolder.appendingPathComponent("\(videoName).mp4")
         self.videoOutputFullFileName = fileUrl.path
         
         if let videoOutputFullFileName = videoOutputFullFileName {
@@ -88,26 +94,6 @@ class SampleHandler: RPBroadcastSampleHandler {
         
         videoWriterInput.expectsMediaDataInRealTime = true
         
-        // Add the audio input
-        var acl = AudioChannelLayout()
-        memset(&acl, 0, MemoryLayout<AudioChannelLayout>.size)
-        acl.mChannelLayoutTag = kAudioChannelLayoutTag_Mono
-        let audioOutputSettings: [String: Any] =
-            [AVFormatIDKey: kAudioFormatMPEG4AAC,
-             AVSampleRateKey: 44100,
-             AVNumberOfChannelsKey: 1,
-             AVEncoderBitRateKey: 64000,
-             AVChannelLayoutKey: Data(bytes: &acl, count: MemoryLayout<AudioChannelLayout>.size)]
-        
-        audioWriterInput = AVAssetWriterInput(mediaType: AVMediaType.audio, outputSettings: audioOutputSettings)
-        
-        guard let audioWriterInput = self.audioWriterInput else {
-            NSLog("ERROR:::No audio writer input")
-            return
-        }
-        
-        audioWriterInput.expectsMediaDataInRealTime = true
-        
         do {
             self.videoWriter = try AVAssetWriter(outputURL: URL(fileURLWithPath: self.videoOutputFullFileName!), fileType: AVFileType.mp4)
             NSLog("DEBUG:::::>>>>>>>>>>>>>Init videoWriter")
@@ -126,23 +112,11 @@ class SampleHandler: RPBroadcastSampleHandler {
             NSLog("ERROR:::Cannot add videoWriterInput into videoWriter")
         }
         
-        // Add audio input
-        if videoWriter.canAdd(audioWriterInput) {
-            videoWriter.add(audioWriterInput)
-        } else {
-            NSLog("ERROR:::Cannot add audioWriterInput into videoWriter")
-        }
-        
         if videoWriter.status != AVAssetWriter.Status.writing {
             NSLog("DEBUG::::::::::::::::The videoWriter status is not writing, and will start writing the video.")
             
             let hasStartedWriting = videoWriter.startWriting()
-            if hasStartedWriting {
-                videoWriter.startSession(atSourceTime: CMTime.zero)
-//                videoWriter.startSession(atSourceTime: self.lastSampleTime!)
-//                NSLog("DEBUG:::Have started writting on videoWriter, session at source time: \(self.lastSampleTime)")
-                NSLog("\(videoWriter.status.rawValue)")
-            } else {
+            if !hasStartedWriting {
                 NSLog("WARN:::Fail to start writing on videoWriter")
             }
         } else {
@@ -172,10 +146,20 @@ class SampleHandler: RPBroadcastSampleHandler {
         }
     }
     
+    func canWrite() -> Bool {
+        return isRecordingVideo && videoWriter != nil && videoWriter?.status == .writing
+    }
+    
     private func captureOutput(_ sampleBuffer: CMSampleBuffer) {
         guard let videoWriter = self.videoWriter else {
             os_log("ERROR:::No video writer")
             return
+        }
+        
+        let writable = canWrite()
+        if writable, self.lastSampleTime == nil {
+            self.lastSampleTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
+            videoWriter.startSession(atSourceTime: self.lastSampleTime!)
         }
         
         self.lastSampleTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
@@ -204,9 +188,6 @@ class SampleHandler: RPBroadcastSampleHandler {
             os_log("ERROR:::No video writer")
             return
         }
-        
-//        os_log("DEBUG::: videoWriter status: %@", videoWriter.status.rawValue)
-        
         
         var finishedWriting = false
         videoWriter.finishWriting {
@@ -245,7 +226,7 @@ class SampleHandler: RPBroadcastSampleHandler {
                     }
                     
                     PHPhotoLibrary.shared().performChanges({
-                        PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: "xxx")
+                        PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: "abc")
                         PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: finalFilename))
                     }) { completed, error in
                         if completed {

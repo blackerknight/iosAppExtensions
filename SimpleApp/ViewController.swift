@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         groupDefaults?.set("A text", forKey: "extensionText")
 
         if #available(iOS 12.0, *) {
+            groupDefaults?.set("videoRecordScreen", forKey: "video_name")
+            
             let broadCastPicker = RPSystemBroadcastPickerView(frame: CGRect(x: 100, y: 200, width: 160, height: 150))
             broadCastPicker.preferredExtension = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
             self.view.addSubview(broadCastPicker)
