@@ -15,25 +15,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let groupDefaults = UserDefaults(suiteName: "group.com.blacker.extension")
-        groupDefaults?.set("A text", forKey: "extensionText")
-
-        if #available(iOS 12.0, *) {
-            groupDefaults?.set("videoRecordScreen", forKey: "video_name")
-            
-            let broadCastPicker = RPSystemBroadcastPickerView(frame: CGRect(x: 100, y: 200, width: 160, height: 150))
-            broadCastPicker.preferredExtension = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
-            self.view.addSubview(broadCastPicker)
-        } else {
-            // no podemos inicial la captura de pantalla en versiones menores a ios 12
+        setup()
+    }
+    
+    private func setup() {
+        let sharedContainerURL: URL? = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.blacker.extension")
+        if let sourceURL: URL = sharedContainerURL?.appendingPathComponent("Records/test_capture_video.mp4") {
+            if let destinationURL: URL = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("test_capture_video.mp4") {
+                do {
+                    try FileManager.default.copyItem(at: sourceURL, to: destinationURL)
+                } catch (let error) {
+                    print("Cannot copy item at \(sourceURL) to \(destinationURL): \(error)")
+                }
+            }
         }
-        if #available(iOS 12.0, *) {
-            os_log(.debug, "Logger", "abcdef")
-        } else {
-            // Fallback on earlier versions
-        }
-
+    }
+    
+    private func loadData() {
         let sharedContainerURL: URL? = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.blacker.extension")
         NSLog("sharedContainerURL = \(String(describing: sharedContainerURL))")
         if let sourceURL: URL = sharedContainerURL?.appendingPathComponent("Records/test_capture_video.mp4") {
