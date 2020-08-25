@@ -11,11 +11,9 @@ import Photos
 import ReplayKit
 import UIKit
 
- @available(iOS 12.0, *)
 class ViewController: UIViewController {
-    var broadCastPicker: RPSystemBroadcastPickerView?
-    var broadcastSession : NSObject?
-
+    private let videoName: String = "videoRecordScreen"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -25,19 +23,17 @@ class ViewController: UIViewController {
         let groupDefaults = UserDefaults(suiteName: "group.com.blacker.extension")
         
         groupDefaults?.set("A text", forKey: "extensionText")
-
+        
         if #available(iOS 12.0, *) {
-            groupDefaults?.set("videoRecordScreen", forKey: "video_name")
+            groupDefaults?.set(videoName, forKey: "video_name")
             
-            broadCastPicker = RPSystemBroadcastPickerView(frame: CGRect(x: 100, y: 200, width: 160, height: 150))
-            broadCastPicker!.preferredExtension = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
-            self.view.addSubview(broadCastPicker!)
+            let broadCastPicker = RPSystemBroadcastPickerView(frame: CGRect(x: 100, y: 200, width: 160, height: 150))
+            broadCastPicker.preferredExtension = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
+            self.view.addSubview(broadCastPicker)
             
-            extensionContext?.loadBroadcastingApplicationInfo(completion: { (bundleID, displayName, appIcon) in
+            extensionContext?.loadBroadcastingApplicationInfo(completion: { _, _, _ in
                 NSLog("La extension ha sido terminada o completada....")
             })
-
-            
             
         } else {
             // no podemos inicial la captura de pantalla en versiones menores a ios 12
@@ -47,19 +43,29 @@ class ViewController: UIViewController {
     
     private func loadData() {
         let sharedContainerURL: URL? = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.blacker.extension")
-        NSLog("sharedContainerURL = \(String(describing: sharedContainerURL))")
-        if let sourceURL: URL = sharedContainerURL?.appendingPathComponent("Records/test_capture_video.mp4") {
-            if let destinationURL: URL = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("test_capture_video.mp4") {
-                do {
-                    try FileManager.default.copyItem(at: sourceURL, to: destinationURL)
-                } catch (let error) {
-                    print("Cannot copy item at \(sourceURL) to \(destinationURL): \(error)")
-                }
+        guard let sourceURL: URL = sharedContainerURL?.appendingPathComponent("Records/\(videoName).mp4") else { return }
+        guard let destinationURL: URL = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("\(videoName).mp4") else { return }
+        
+        let fileManager = FileManager.default
+        
+        let finalFilename = destinationURL.path
+        if fileManager.fileExists(atPath: finalFilename) {
+            NSLog("WARN:::The file: \(finalFilename) exists, will delete the existing file")
+            do {
+                try fileManager.removeItem(atPath: finalFilename)
+            } catch let error as NSError {
+                NSLog("WARN:::Cannot delete existing file: \(finalFilename), error: \(error.debugDescription)")
             }
+        } else {
+            NSLog("DEBUG:::The file \(finalFilename) doesn't exist")
+        }
+        
+        do {
+            try fileManager.copyItem(at: sourceURL, to: destinationURL)
+        } catch {
+            print("Cannot copy item at \(sourceURL) to \(destinationURL): \(error)")
         }
     }
     
-    @IBAction func clickButton(_ sender: UIButton) {
-        
-    }
+    @IBAction func clickButton(_ sender: UIButton) {}
 }
