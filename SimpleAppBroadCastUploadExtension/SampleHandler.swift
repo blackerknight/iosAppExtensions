@@ -194,74 +194,14 @@ class SampleHandler: RPBroadcastSampleHandler {
         
         videoWriter.finishWriting {
             
-//            NSLog("DEBUG:::The videoWriter finished writing.")
-//            if videoWriter.status == .completed {
-//                NSLog("DEBUG:::The videoWriter status is completed")
-//
-//                let fileManager = FileManager.default
-//                if fileManager.fileExists(atPath: self.videoOutputFullFileName!) {
-////                    NSLog("DEBUG:::The file: \(self.videoOutputFullFileName ?? "") has been saved in documents folder, and is ready to be moved to camera roll")
-////
-////                    let sharedFileURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.blacker.extension")
-////                    guard let documentsPath = sharedFileURL?.path else {
-////                        NSLog("ERROR:::No shared file URL path")
-////                        finishedWriting = true
-////                        return
-////                    }
-////                    let finalFilename = documentsPath + "/test_capture_video.mp4"
-////
-////                    // Check whether file exists
-////                    if fileManager.fileExists(atPath: finalFilename) {
-////                        NSLog("WARN:::The file: \(finalFilename) exists, will delete the existing file")
-////                        do {
-////                            try fileManager.removeItem(atPath: finalFilename)
-////                        } catch let error as NSError {
-////                            NSLog("WARN:::Cannot delete existing file: \(finalFilename), error: \(error.debugDescription)")
-////                        }
-////                    } else {
-////                        NSLog("DEBUG:::The file \(self.videoOutputFullFileName!) doesn't exist")
-////                    }
-////
-////                    do {
-////                        try fileManager.copyItem(at: URL(fileURLWithPath: self.videoOutputFullFileName!), to: URL(fileURLWithPath: finalFilename))
-////                    } catch let error as NSError {
-////                        NSLog("ERROR:::\(error.debugDescription)")
-////                    }
-////
-////                    PHPhotoLibrary.shared().performChanges({
-////                        PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: "abc")
-////                        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: finalFilename))
-////                    }) { completed, error in
-////                        if completed {
-////                            NSLog("Video \(self.videoOutputFullFileName ?? "") has been moved to camera roll")
-////                        }
-////
-////                        if error != nil {
-////                            NSLog("ERROR:::Cannot move the video \(self.videoOutputFullFileName ?? "") to camera roll, error: \(error!.localizedDescription)")
-////                        }
-////
-////                        finishedWriting = true
-////                    }
-//
-//                } else {
-//                    NSLog("ERROR:::The file: \(self.videoOutputFullFileName ?? "") doesn't exist, so can't move this file camera roll")
-//                    finishedWriting = true
-//                }
-//            } else {
-//                NSLog("WARN:::The videoWriter status is not completed, status: \(videoWriter.status)")
-//                finishedWriting = true
-//            }
         }
         
         repeat {
             NSLog("DEBUG:::Waiting to finish writing...")
+            usleep(useconds_t(100 * 1000))
         } while(videoWriter.status == .writing)
         
-//        while videoWriter.status == .completed || videoWriter.status == .failed {
-//            os_log("DEBUG:::Waiting to finish writing...%@", videoWriter.status.rawValue)
-//        }
         NSLog("DEBUG::: completed")
-        
         // Check whether file exists
         if fileManager.fileExists(atPath: self.videoOutputFullFileName!) {
             NSLog("DEBUG:::The file: \(self.videoOutputFullFileName!) exists.")
