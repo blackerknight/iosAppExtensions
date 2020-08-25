@@ -6,13 +6,13 @@
 //  Copyright © 2020 eduardo mancilla. All rights reserved.
 //
 
-import os
-import Photos
 import ReplayKit
 import UIKit
+import AVKit
 
 class ViewController: UIViewController {
     private let videoName: String = "videoRecordScreen"
+    private var videoURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +62,21 @@ class ViewController: UIViewController {
         
         do {
             try fileManager.copyItem(at: sourceURL, to: destinationURL)
+            self.videoURL = destinationURL
         } catch {
             print("Cannot copy item at \(sourceURL) to \(destinationURL): \(error)")
         }
     }
     
-    @IBAction func clickButton(_ sender: UIButton) {}
+    @IBAction func tapPlayVideo(_ sender: UIButton) {
+        loadData()
+        guard let videoURL = videoURL else { return }
+        let player = AVPlayer(url: videoURL)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.present(playerController, animated: true) {
+            player.play()
+        }
+        
+    }
 }
