@@ -15,7 +15,7 @@ class SampleHandler: RPBroadcastSampleHandler {
     var videoOutputFullFileName: String?
     var isRecordingVideo: Bool = false
     var videoWriterInput: AVAssetWriterInput?
-//    var audioWriterInput: AVAssetWriterInput?
+    //    var audioWriterInput: AVAssetWriterInput?
     var videoWriter: AVAssetWriter?
     var lastSampleTime: CMTime?
     let fileManager = FileManager.default
@@ -37,11 +37,11 @@ class SampleHandler: RPBroadcastSampleHandler {
             return
         }
         
-        guard let urlFolder = getSharedFolder(namefile: "Records") else { return }
+        guard let urlFolder = self.getSharedFolder(namefile: "Records") else { return }
         let fileUrl = urlFolder.appendingPathComponent("\(videoName).mp4")
         self.videoOutputFullFileName = fileUrl.path
         
-        if let videoOutputFullFileName = videoOutputFullFileName {
+        if let videoOutputFullFileName = self.videoOutputFullFileName {
             os_log("el nombre de la ruta del video es: %@", videoOutputFullFileName)
         } else {
             os_log("ERROR:The video output file name is nil")
@@ -67,55 +67,57 @@ class SampleHandler: RPBroadcastSampleHandler {
             }
         }
         
-        let screen = UIScreen.main
-        let screenBounds = screen.bounds.size
-        let videoCompressionPropertys = [
-            AVVideoAverageBitRateKey: screenBounds.width * screenBounds.height * 10.1
-        ]
-        
-        let videoSettings: [String: Any] = [
-            AVVideoCodecKey: AVVideoCodecType.h264,
-            AVVideoWidthKey: screenBounds.width,
-            AVVideoHeightKey: screenBounds.height,
-            AVVideoCompressionPropertiesKey: videoCompressionPropertys
-        ]
-        
-        self.videoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoSettings)
-        
-        guard let videoWriterInput = self.videoWriterInput else {
-            NSLog("ERROR:::No video writer input")
-            return
-        }
-        
-        videoWriterInput.expectsMediaDataInRealTime = true
-        
-        do {
-            self.videoWriter = try AVAssetWriter(outputURL: URL(fileURLWithPath: self.videoOutputFullFileName!), fileType: AVFileType.mp4)
-            NSLog("DEBUG:::::>>>>>>>>>>>>>Init videoWriter")
-        } catch let error as NSError {
-            NSLog("ERROR:::::>>>>>>>>>>>>>Cannot init videoWriter, error:\(error.localizedDescription)")
-        }
-        
-        guard let videoWriter = self.videoWriter else {
-            NSLog("ERROR:::No video writer")
-            return
-        }
-        
-        if videoWriter.canAdd(videoWriterInput) {
-            videoWriter.add(videoWriterInput)
-        } else {
-            NSLog("ERROR:::Cannot add videoWriterInput into videoWriter")
-        }
-        
-        if videoWriter.status != AVAssetWriter.Status.writing {
-            NSLog("DEBUG::::::::::::::::The videoWriter status is not writing, and will start writing the video.")
+        DispatchQueue.main.async {
+            let screen = UIScreen.main
+            let screenBounds = screen.bounds.size
+            let videoCompressionPropertys = [
+                AVVideoAverageBitRateKey: screenBounds.width * screenBounds.height * 10.1
+            ]
             
-            let hasStartedWriting = videoWriter.startWriting()
-            if !hasStartedWriting {
-                NSLog("WARN:::Fail to start writing on videoWriter")
+            let videoSettings: [String: Any] = [
+                AVVideoCodecKey: AVVideoCodecType.h264,
+                AVVideoWidthKey: screenBounds.width,
+                AVVideoHeightKey: screenBounds.height,
+                AVVideoCompressionPropertiesKey: videoCompressionPropertys
+            ]
+            
+            self.videoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoSettings)
+            
+            guard let videoWriterInput = self.videoWriterInput else {
+                NSLog("ERROR:::No video writer input")
+                return
             }
-        } else {
-            NSLog("WARN:::The videoWriter.status is writing now, so cannot start writing action on videoWriter")
+            
+            videoWriterInput.expectsMediaDataInRealTime = true
+            
+            do {
+                self.videoWriter = try AVAssetWriter(outputURL: URL(fileURLWithPath: self.videoOutputFullFileName!), fileType: AVFileType.mp4)
+                NSLog("DEBUG:::::>>>>>>>>>>>>>Init videoWriter")
+            } catch let error as NSError {
+                NSLog("ERROR:::::>>>>>>>>>>>>>Cannot init videoWriter, error:\(error.localizedDescription)")
+            }
+            
+            guard let videoWriter = self.videoWriter else {
+                NSLog("ERROR:::No video writer")
+                return
+            }
+            
+            if videoWriter.canAdd(videoWriterInput) {
+                videoWriter.add(videoWriterInput)
+            } else {
+                NSLog("ERROR:::Cannot add videoWriterInput into videoWriter")
+            }
+            
+            if videoWriter.status != AVAssetWriter.Status.writing {
+                NSLog("DEBUG::::::::::::::::The videoWriter status is not writing, and will start writing the video.")
+                
+                let hasStartedWriting = videoWriter.startWriting()
+                if !hasStartedWriting {
+                    NSLog("WARN:::Fail to start writing on videoWriter")
+                }
+            } else {
+                NSLog("WARN:::The videoWriter.status is writing now, so cannot start writing action on videoWriter")
+            }
         }
     }
     
