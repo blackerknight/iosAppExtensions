@@ -11,8 +11,11 @@ import Photos
 import ReplayKit
 import UIKit
 
+ @available(iOS 12.0, *)
 class ViewController: UIViewController {
-    
+    var broadCastPicker: RPSystemBroadcastPickerView?
+    var broadcastSession : NSObject?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -26,9 +29,16 @@ class ViewController: UIViewController {
         if #available(iOS 12.0, *) {
             groupDefaults?.set("videoRecordScreen", forKey: "video_name")
             
-            let broadCastPicker = RPSystemBroadcastPickerView(frame: CGRect(x: 100, y: 200, width: 160, height: 150))
-            broadCastPicker.preferredExtension = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
-            self.view.addSubview(broadCastPicker)
+            broadCastPicker = RPSystemBroadcastPickerView(frame: CGRect(x: 100, y: 200, width: 160, height: 150))
+            broadCastPicker!.preferredExtension = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
+            self.view.addSubview(broadCastPicker!)
+            
+            extensionContext?.loadBroadcastingApplicationInfo(completion: { (bundleID, displayName, appIcon) in
+                NSLog("La extension ha sido terminada o completada....")
+            })
+
+            
+            
         } else {
             // no podemos inicial la captura de pantalla en versiones menores a ios 12
         }

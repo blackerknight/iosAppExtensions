@@ -26,15 +26,12 @@ class SampleHandler: RPBroadcastSampleHandler {
         return url
     }
     
-    override func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
-        os_log("iniciado el broad cast")
-        os_log("abcdef")
+    override func broadcastAnnotated(withApplicationInfo applicationInfo: [AnyHashable : Any]) {
+        NSLog("broadcastAnnotated: \(applicationInfo)")
         
-        //        if (setupInfo != nil) {
-        //            session.broadcastDescription.name = setupInfo["name"]
-        //        } else {
-        //            session.broadcastDescription.iOSScreenBroadcast = true
-        //        }
+    }
+    
+    override func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
         
         let groupDefaults = UserDefaults(suiteName: "group.com.blacker.extension")
         guard let videoName = groupDefaults?.value(forKey: "video_name") as? String else {
