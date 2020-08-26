@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     private let videoName: String = "videoRecordScreen.mp4"
     private var videoURL: URL?
     private var portal: BBPortalProtocol!
+    @IBOutlet weak var labelStatus: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +71,21 @@ class ViewController: UIViewController {
     
     private func startPortal() {
         portal = BBPortal(withGroupIdentifier: Shared.Constantes.groupName, andPortalID: Shared.Constantes.portalName)
-        portal.onDataAvailable = { (data) in
+        
+        portal.onDataAvailable = { [weak self] data in
+            guard let self = self else { return }
             guard let dict = data as? [String: Any?] else { return }
-            let status = dict["key"] as! String
-            print("I received some data through the portal: ", status)
+            let status = dict[Shared.Constantes.Key.status] as! String
+            DispatchQueue.main.async {
+                switch status {
+                case "finish":
+                    self.labelStatus.text = "Se termino de grabar la pantalla. \n Video guardado"
+                case "start":
+                    self.labelStatus.text = "Grabando la pantalla..."
+                default:
+                    print("etiqueta fuera del switch: \(status)")
+                }
+            }
         }
     }
     

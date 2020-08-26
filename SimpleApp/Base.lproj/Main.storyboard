@@ -23,6 +23,12 @@
                                 <color key="textColor" name="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo record screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEF-9h-hDn">
+                                <rect key="frame" x="5" y="430" width="404" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" name="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-DM-q2a">
                                 <rect key="frame" x="15" y="800" width="384" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -38,12 +44,18 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R2g-DM-q2a" secondAttribute="trailing" constant="15" id="Fy3-ed-iE2"/>
                             <constraint firstItem="ZuR-wm-LY6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GoW-FG-zci"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEF-9h-hDn" secondAttribute="trailing" constant="5" id="Kza-Tm-eXR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R2g-DM-q2a" secondAttribute="bottom" constant="20" id="S7u-MK-HY1"/>
                             <constraint firstItem="ZuR-wm-LY6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Trc-9A-v4M"/>
+                            <constraint firstItem="SEF-9h-hDn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UOM-9W-sbz"/>
                             <constraint firstItem="R2g-DM-q2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gM0-MR-u80"/>
+                            <constraint firstItem="SEF-9h-hDn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="i9K-ax-O29"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelStatus" destination="SEF-9h-hDn" id="TCj-H5-piC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

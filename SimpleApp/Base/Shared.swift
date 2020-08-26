@@ -15,6 +15,7 @@ class Shared {
         static let preferredExtension: String = "black.dev.SimpleApp.SimpleAppBroadCastUploadExtension"
         struct Key {
             static let videoName = "video_name"
+            static let status: String = "key_status"
         }
         struct Names {
             static let folderShared = "Records"

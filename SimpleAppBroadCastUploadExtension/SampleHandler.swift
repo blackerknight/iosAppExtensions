@@ -43,15 +43,17 @@ class SampleHandler: RPBroadcastSampleHandler {
         }
     }
     
-    override func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
-        portal = BBPortal(withGroupIdentifier: Shared.Constantes.groupName, andPortalID: "id.for.this.portal")
-        portal.send(data: ["key": "What ever data you want"]) {
-            (error) in
-
+    private func send(msg: String, key: String) {
+        portal.send(data: [key: msg]) { (error) in
             if let anError = error {
                 NSLog("Send failed with error: ", anError)
             }
         }
+    }
+    
+    override func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
+        portal = BBPortal(withGroupIdentifier: Shared.Constantes.groupName, andPortalID: "id.for.this.portal")
+        send(msg: "start", key: Shared.Constantes.Key.status)
         
         validatefiles()
         self.isRecordingVideo = true
@@ -102,7 +104,10 @@ class SampleHandler: RPBroadcastSampleHandler {
     }
     
     override func broadcastFinished() {
-        self.processVideoFinish()
+        self.isRecordingVideo = false
+        finishWriteVideo()
+        finishSendMsg()
+        NSLog("DEBUG::: completed")
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
@@ -148,8 +153,7 @@ class SampleHandler: RPBroadcastSampleHandler {
         }
     }
     
-    private func processVideoFinish() {
-        self.isRecordingVideo = false
+    private func finishWriteVideo() {
         guard let videoWriter = self.videoWriter else {
             os_log("ERROR:::No video writer")
             return
@@ -160,7 +164,17 @@ class SampleHandler: RPBroadcastSampleHandler {
             NSLog("DEBUG:::Waiting to finish writing...")
             usleep(useconds_t(100 * 1000))
         } while(videoWriter.status == .writing)
-        
-        NSLog("DEBUG::: completed")
     }
+    
+    private func finishSendMsg() {
+        var sended: Bool = false
+        portal.send(data: [Shared.Constantes.Key.status: "finish"]) { (error) in
+            sended = true
+        }
+        
+        repeat {
+            NSLog("DEBUG:::Waiting to finish send...")
+        } while(sended == false)
+    }
+    
 }
