@@ -6,366 +6,209 @@
 //  Copyright © 2020 eduardo mancilla. All rights reserved.
 //
 
+import os
+import Photos
 import ReplayKit
 import VideoToolbox
-import Photos
-import os
 
 class SampleHandler: RPBroadcastSampleHandler {
     var videoOutputFullFileName: String?
     var isRecordingVideo: Bool = false
     var videoWriterInput: AVAssetWriterInput?
-    var audioWriterInput: AVAssetWriterInput?
+    //    var audioWriterInput: AVAssetWriterInput?
     var videoWriter: AVAssetWriter?
     var lastSampleTime: CMTime?
+    let fileManager = FileManager.default
     
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
+    private func getSharedFolder(namefile: String) -> URL? {
+        let url = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.blacker.extension")?
+            .appendingPathComponent(namefile)
+        return url
     }
     
-    override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
-        // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional.
-        os_log("iniciado el broad cast", type: .debug)
-        os_log(.debug, "Logger", "abcdef")
-        
-        //        if (setupInfo != nil) {
-        //            session.broadcastDescription.name = setupInfo["name"]
-        //        } else {
-        //            session.broadcastDescription.iOSScreenBroadcast = true
-        //        }
-        
-//        let fileManager = FileManager.default
-//        var documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-//        self.videoOutputFullFileName = documentsPath + "test_capture_video.mp4"
-        
-        self.videoOutputFullFileName = self.getDocumentsDirectory().appendingPathComponent("test_capture_video.mp4").path
-        
-        if let videoOutputFullFileName = videoOutputFullFileName {
-//            NSLog("el nombre de la ruta del video es: \(videoOutputFullFileName)")
-            os_log("el nombre de la ruta del video es: %@", type: .debug, videoOutputFullFileName)
-        } else {
-            os_log("ERROR:The video output file name is nil", type: .debug)
+    override func broadcastAnnotated(withApplicationInfo applicationInfo: [AnyHashable: Any]) {
+        NSLog("broadcastAnnotated: \(applicationInfo)")
+    }
+    
+    override func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
+        let groupDefaults = UserDefaults(suiteName: "group.com.blacker.extension")
+        guard let videoName = groupDefaults?.value(forKey: "video_name") as? String else {
+            NSLog("no existe la clave video_name")
             return
         }
         
-        os_log("this is what i will see")
+        guard let urlFolder = self.getSharedFolder(namefile: "Records") else { return }
+        let fileUrl = urlFolder.appendingPathComponent("\(videoName).mp4")
+        self.videoOutputFullFileName = fileUrl.path
+        
+        if let videoOutputFullFileName = self.videoOutputFullFileName {
+            os_log("el nombre de la ruta del video es: %@", videoOutputFullFileName)
+        } else {
+            os_log("ERROR:The video output file name is nil")
+            return
+        }
         
         self.isRecordingVideo = true
         let fileManager = FileManager.default
         if fileManager.fileExists(atPath: self.videoOutputFullFileName!) {
-            NSLog("WARN:::The file: \(self.videoOutputFullFileName!) exists, will delete the existing file")
+            os_log("WARN:::The file: %@ exists, will delete the existing file", self.videoOutputFullFileName!)
             do {
                 try fileManager.removeItem(atPath: self.videoOutputFullFileName!)
             } catch let error as NSError {
-                NSLog("WARN:::Cannot delete existing file: \(self.videoOutputFullFileName!), error: \(error.debugDescription)")
+                os_log("WARN:::Cannot delete existing file: %@, error: %@", self.videoOutputFullFileName!, error.debugDescription)
+            }
+        } else {
+            os_log("DEBUG:::The file %@ doesn't exist", self.videoOutputFullFileName!)
+            NSLog("Se va atratar de crear los folders")
+            do {
+                try FileManager.default.createDirectory(atPath: urlFolder.path, withIntermediateDirectories: true, attributes: nil)
+            } catch let error as NSError {
+                os_log("WARN:::Cannot create file: %@, error: %@", urlFolder.path, error.debugDescription)
+            }
+        }
+        
+        DispatchQueue.main.async {
+            let screen = UIScreen.main
+            let screenBounds = screen.bounds.size
+            let videoCompressionPropertys = [
+                AVVideoAverageBitRateKey: screenBounds.width * screenBounds.height * 10.1
+            ]
+            
+            let videoSettings: [String: Any] = [
+                AVVideoCodecKey: AVVideoCodecType.h264,
+                AVVideoWidthKey: screenBounds.width,
+                AVVideoHeightKey: screenBounds.height,
+                AVVideoCompressionPropertiesKey: videoCompressionPropertys
+            ]
+            
+            self.videoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoSettings)
+            
+            guard let videoWriterInput = self.videoWriterInput else {
+                NSLog("ERROR:::No video writer input")
+                return
             }
             
-        } else {
-            NSLog("DEBUG:::The file \(self.videoOutputFullFileName!) doesn't exist")
-        }
-        
-        let screen = UIScreen.main
-        let screenBounds = screen.bounds.size
-        let videoCompressionPropertys = [
-            AVVideoAverageBitRateKey: screenBounds.width * screenBounds.height * 10.1
-        ]
-        
-        let videoSettings: [String: Any] = [
-            AVVideoCodecKey: AVVideoCodecType.h264,
-            AVVideoWidthKey: screenBounds.width,
-            AVVideoHeightKey: screenBounds.height,
-            AVVideoCompressionPropertiesKey: videoCompressionPropertys
-        ]
-        
-        self.videoWriterInput = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoSettings)
-        
-        guard let videoWriterInput = self.videoWriterInput else {
-            NSLog("ERROR:::No video writer input")
-            return
-        }
-        
-        videoWriterInput.expectsMediaDataInRealTime = true
-        
-        // Add the audio input
-        var acl = AudioChannelLayout()
-        memset(&acl, 0, MemoryLayout<AudioChannelLayout>.size)
-        acl.mChannelLayoutTag = kAudioChannelLayoutTag_Mono;
-        let audioOutputSettings: [String: Any] =
-            [ AVFormatIDKey: kAudioFormatMPEG4AAC,
-              AVSampleRateKey : 44100,
-              AVNumberOfChannelsKey : 1,
-              AVEncoderBitRateKey : 64000,
-              AVChannelLayoutKey : Data(bytes: &acl, count: MemoryLayout<AudioChannelLayout>.size)]
-        
-        audioWriterInput = AVAssetWriterInput(mediaType: AVMediaType.audio, outputSettings: audioOutputSettings)
-        
-        guard let audioWriterInput = self.audioWriterInput else {
-            NSLog("ERROR:::No audio writer input")
-            return
-        }
-        
-        audioWriterInput.expectsMediaDataInRealTime = true
-        
-        do {
-            self.videoWriter = try AVAssetWriter(outputURL: URL(fileURLWithPath: self.videoOutputFullFileName!), fileType: AVFileType.mp4)
-        } catch let error as NSError {
-            NSLog("ERROR:::::>>>>>>>>>>>>>Cannot init videoWriter, error:\(error.localizedDescription)")
-        }
-        
-        guard let videoWriter = self.videoWriter else {
-            NSLog("ERROR:::No video writer")
-            return
-        }
-        
-        if videoWriter.canAdd(videoWriterInput) {
-            videoWriter.add(videoWriterInput)
-        } else {
-            NSLog("ERROR:::Cannot add videoWriterInput into videoWriter")
-        }
-        
-        //Add audio input
-        if videoWriter.canAdd(audioWriterInput) {
-            videoWriter.add(audioWriterInput)
-        } else {
-            NSLog("ERROR:::Cannot add audioWriterInput into videoWriter")
-        }
-        
-        if videoWriter.status != AVAssetWriter.Status.writing {
-            NSLog("DEBUG::::::::::::::::The videoWriter status is not writing, and will start writing the video.")
+            videoWriterInput.expectsMediaDataInRealTime = true
             
-            let hasStartedWriting = videoWriter.startWriting()
-            if hasStartedWriting {
-                videoWriter.startSession(atSourceTime: self.lastSampleTime!)
-                NSLog("DEBUG:::Have started writting on videoWriter, session at source time: \(self.lastSampleTime)")
-                NSLog("\(videoWriter.status.rawValue)")
+            do {
+                self.videoWriter = try AVAssetWriter(outputURL: URL(fileURLWithPath: self.videoOutputFullFileName!), fileType: AVFileType.mp4)
+                NSLog("DEBUG:::::>>>>>>>>>>>>>Init videoWriter")
+            } catch let error as NSError {
+                NSLog("ERROR:::::>>>>>>>>>>>>>Cannot init videoWriter, error:\(error.localizedDescription)")
+            }
+            
+            guard let videoWriter = self.videoWriter else {
+                NSLog("ERROR:::No video writer")
+                return
+            }
+            
+            if videoWriter.canAdd(videoWriterInput) {
+                videoWriter.add(videoWriterInput)
             } else {
-                NSLog("WARN:::Fail to start writing on videoWriter")
+                NSLog("ERROR:::Cannot add videoWriterInput into videoWriter")
             }
-        } else {
-            NSLog("WARN:::The videoWriter.status is writing now, so cannot start writing action on videoWriter")
+            
+            if videoWriter.status != AVAssetWriter.Status.writing {
+                NSLog("DEBUG::::::::::::::::The videoWriter status is not writing, and will start writing the video.")
+                
+                let hasStartedWriting = videoWriter.startWriting()
+                if !hasStartedWriting {
+                    NSLog("WARN:::Fail to start writing on videoWriter")
+                }
+            } else {
+                NSLog("WARN:::The videoWriter.status is writing now, so cannot start writing action on videoWriter")
+            }
         }
-        
     }
     
     override func broadcastPaused() {
-        // User has requested to pause the broadcast. Samples will stop being delivered.
-        NSLog("pausado el broad cast")
+        os_log("pausado el broad cast")
     }
     
     override func broadcastResumed() {
-        // User has requested to resume the broadcast. Samples delivery will resume.
-        NSLog("resumido el broad cast")
+        os_log("resumido el broad cast")
     }
     
     override func broadcastFinished() {
-        // User has requested to finish the broadcast.
-        NSLog("finalizado el broad cast")
-        
-        processVideoFinish()
-        
-//        print("DEBUG::: Starting to process recorder final...")
-//        print("DEBUG::: videoWriter status: \(self.videoWriter!.status.rawValue)")
-//        self.isRecordingVideo = false
-//
-//        guard let videoWriterInput = self.videoWriterInput else {
-//            print("ERROR:::No video writer input")
-//            return
-//        }
-//        guard let videoWriter = self.videoWriter else {
-//            print("ERROR:::No video writer")
-//            return
-//        }
-//
-//        guard let audioWriterInput = self.audioWriterInput else {
-//            print("ERROR:::No audio writer input")
-//            return
-//        }
-//
-//        videoWriterInput.markAsFinished()
-//        audioWriterInput.markAsFinished()
-//        videoWriter.finishWriting {
-//            if videoWriter.status == AVAssetWriter.Status.completed {
-//                print("DEBUG:::The videoWriter status is completed")
-//
-//                let fileManager = FileManager.default
-//                if fileManager.fileExists(atPath: self.videoOutputFullFileName!) {
-//                    print("DEBUG:::The file: \(self.videoOutputFullFileName ?? "") has been saved in documents folder, and is ready to be moved to camera roll")
-//
-//
-//                    let sharedFileURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.jp.awalker.co.Hotter")
-//                    guard let documentsPath = sharedFileURL?.path else {
-//                        print("ERROR:::No shared file URL path")
-//                        return
-//                    }
-//                    //                    let finalFilename = documentsPath.stringByAppendingPathComponent(str: "test_capture_video.mp4")
-//                    let finalFilename = documentsPath + "test_capture_video.mp4"
-//
-//                    //Check whether file exists
-//                    if fileManager.fileExists(atPath: finalFilename) {
-//                        print("WARN:::The file: \(finalFilename) exists, will delete the existing file")
-//                        do {
-//                            try fileManager.removeItem(atPath: finalFilename)
-//                        } catch let error as NSError {
-//                            print("WARN:::Cannot delete existing file: \(finalFilename), error: \(error.debugDescription)")
-//                        }
-//                    } else {
-//                        print("DEBUG:::The file \(self.videoOutputFullFileName!) doesn't exist")
-//                    }
-//
-//                    do {
-//                        try fileManager.copyItem(at: URL(fileURLWithPath: self.videoOutputFullFileName!), to: URL(fileURLWithPath: finalFilename))
-//                    }
-//                    catch let error as NSError {
-//                        print("ERROR:::\(error.debugDescription)")
-//                    }
-//
-//                    PHPhotoLibrary.shared().performChanges({
-//                        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: finalFilename))
-//                    }) { completed, error in
-//                        if completed {
-//                            print("Video \(self.videoOutputFullFileName ?? "") has been moved to camera roll")
-//                        }
-//
-//                        if error != nil {
-//                            print ("ERROR:::Cannot move the video \(self.videoOutputFullFileName ?? "") to camera roll, error: \(error!.localizedDescription)")
-//                        }
-//                    }
-//
-//                } else {
-//                    print("ERROR:::The file: \(self.videoOutputFullFileName ?? "") doesn't exist, so can't move this file camera roll")
-//                }
-//            } else {
-//                print("WARN:::The videoWriter status is not completed, stauts: \(videoWriter.status)")
-//            }
-//        }
+        os_log("finalizado el broad cast")
+        self.processVideoFinish()
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         switch sampleBufferType {
-        case RPSampleBufferType.video:
-            // Handle video sample buffer
-            captureOutput(sampleBuffer)
-            break
-        case RPSampleBufferType.audioApp:
-            // Handle audio sample buffer for app audio
-            break
-        case RPSampleBufferType.audioMic:
-            // Handle audio sample buffer for mic audio
-            break
-        @unknown default:
-            // Handle other sample buffer types
-            fatalError("Unknown type of sample buffer")
+        case RPSampleBufferType.video: captureOutput(sampleBuffer)
+        case RPSampleBufferType.audioApp: break
+        case RPSampleBufferType.audioMic: break
+        @unknown default: fatalError("Unknown type of sample buffer")
         }
     }
     
+    func canWrite() -> Bool {
+        return isRecordingVideo && videoWriter != nil && videoWriter?.status == .writing
+    }
+    
     private func captureOutput(_ sampleBuffer: CMSampleBuffer) {
-        self.lastSampleTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
+        guard let videoWriter = self.videoWriter else {
+            os_log("ERROR:::No video writer")
+            return
+        }
         
-        // Append the sampleBuffer into videoWriterInput
+        let writable = canWrite()
+        if writable, self.lastSampleTime == nil {
+            self.lastSampleTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
+            videoWriter.startSession(atSourceTime: self.lastSampleTime!)
+        }
+        
+        self.lastSampleTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
         if self.isRecordingVideo {
             if self.videoWriterInput!.isReadyForMoreMediaData {
-                if self.videoWriter!.status == AVAssetWriter.Status.writing {
+                if videoWriter.status == AVAssetWriter.Status.writing {
                     let whetherAppendSampleBuffer = self.videoWriterInput!.append(sampleBuffer)
-                    NSLog(">>>>>>>>>>>>>The time::: \(self.lastSampleTime!.value)/\(self.lastSampleTime!.timescale)")
                     if whetherAppendSampleBuffer {
-                        NSLog("DEBUG::: Append sample buffer successfully")
+                        os_log("DEBUG::: Append sample buffer successfully")
                     } else {
-                        NSLog("WARN::: Append sample buffer failed")
+                        os_log("WARN::: Append sample buffer failed")
                     }
                 } else {
-                    NSLog("WARN:::The videoWriter status is not writing")
+                    os_log("WARN:::The videoWriter status is not writing")
                 }
             } else {
-                NSLog("WARN:::Cannot append sample buffer into videoWriterInput")
+                os_log("WARN:::Cannot append sample buffer into videoWriterInput")
             }
         }
     }
     
-    
-    private func processVideoFinish() {
-        NSLog("DEBUG::: Starting to process recorder final...")
-        NSLog("DEBUG::: videoWriter status: \(self.videoWriter!.status.rawValue)")
-        self.isRecordingVideo = false
-        
-        guard let videoWriterInput = self.videoWriterInput else {
-            NSLog("ERROR:::No video writer input")
-            return
-        }
+    private func cancelVideoFinish() {
         guard let videoWriter = self.videoWriter else {
             NSLog("ERROR:::No video writer")
             return
         }
-        
-        guard let audioWriterInput = self.audioWriterInput else {
-            NSLog("ERROR:::No audio writer input")
+        videoWriter.cancelWriting()
+        NSLog("DEBUG::: Cancelado video save...")
+    }
+    
+    private func processVideoFinish() {
+        self.isRecordingVideo = false
+        guard let videoWriter = self.videoWriter else {
+            os_log("ERROR:::No video writer")
             return
         }
         
-        var finishedWriting = false
         videoWriter.finishWriting {
-            NSLog("DEBUG:::The videoWriter finished writing.")
-            if videoWriter.status == .completed {
-                NSLog("DEBUG:::The videoWriter status is completed")
-                
-                let fileManager = FileManager.default
-                if fileManager.fileExists(atPath: self.videoOutputFullFileName!) {
-                    NSLog("DEBUG:::The file: \(self.videoOutputFullFileName ?? "") has been saved in documents folder, and is ready to be moved to camera roll")
-                    
-                    let sharedFileURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.blacker.extension")
-                    guard let documentsPath = sharedFileURL?.path else {
-                        NSLog("ERROR:::No shared file URL path")
-                        finishedWriting = true
-                        return
-                    }
-                    let finalFilename = documentsPath + "/test_capture_video.mp4"
-
-                    //Check whether file exists
-                    if fileManager.fileExists(atPath: finalFilename) {
-                        NSLog("WARN:::The file: \(finalFilename) exists, will delete the existing file")
-                        do {
-                            try fileManager.removeItem(atPath: finalFilename)
-                        } catch let error as NSError {
-                            NSLog("WARN:::Cannot delete existing file: \(finalFilename), error: \(error.debugDescription)")
-                        }
-                    } else {
-                        NSLog("DEBUG:::The file \(self.videoOutputFullFileName!) doesn't exist")
-                    }
-
-                    do {
-                        try fileManager.copyItem(at: URL(fileURLWithPath: self.videoOutputFullFileName!), to: URL(fileURLWithPath: finalFilename))
-                    }
-                    catch let error as NSError {
-                        NSLog("ERROR:::\(error.debugDescription)")
-                    }
-
-                    PHPhotoLibrary.shared().performChanges({
-                        PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: "xxx")
-                        PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: URL(fileURLWithPath: finalFilename))
-                    }) { completed, error in
-                        if completed {
-                            NSLog("Video \(self.videoOutputFullFileName ?? "") has been moved to camera roll")
-                        }
-
-                        if error != nil {
-                            NSLog("ERROR:::Cannot move the video \(self.videoOutputFullFileName ?? "") to camera roll, error: \(error!.localizedDescription)")
-                        }
-
-                        finishedWriting = true
-                    }
-                    
-                } else {
-                    NSLog("ERROR:::The file: \(self.videoOutputFullFileName ?? "") doesn't exist, so can't move this file camera roll")
-                    finishedWriting = true
-                }
-            } else {
-                NSLog("WARN:::The videoWriter status is not completed, status: \(videoWriter.status)")
-                finishedWriting = true
-            }
+            
         }
         
-        while finishedWriting == false {
+        repeat {
             NSLog("DEBUG:::Waiting to finish writing...")
+            usleep(useconds_t(100 * 1000))
+        } while(videoWriter.status == .writing)
+        
+        NSLog("DEBUG::: completed")
+        // Check whether file exists
+        if fileManager.fileExists(atPath: self.videoOutputFullFileName!) {
+            NSLog("DEBUG:::The file: \(self.videoOutputFullFileName!) exists.")
+        } else {
+            NSLog("DEBUG:::The file \(self.videoOutputFullFileName!) doesn't exist")
         }
     }
 }
