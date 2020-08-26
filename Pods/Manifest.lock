@@ -1,0 +1,20 @@
+PODS:
+  - BBPortal (0.1.2):
+    - DAFileMonitor
+  - DAFileMonitor (0.1.1)
+
+DEPENDENCIES:
+  - BBPortal
+
+SPEC REPOS:
+  trunk:
+    - BBPortal
+    - DAFileMonitor
+
+SPEC CHECKSUMS:
+  BBPortal: 95a2105c65e272e60c449faa6b21e0a7f5987c2a
+  DAFileMonitor: fd59e446e6fa38939abfe66b911a15d977f04c62
+
+PODFILE CHECKSUM: 76c92bc1ec1409a6dc8df2803ab59684333f2a48
+
+COCOAPODS: 1.8.4

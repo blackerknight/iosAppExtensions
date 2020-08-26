@@ -1,0 +1,1673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0950D05716C7F7266FE2302B8A849DBE /* DAFileMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEE4A9E0A4597E8D6CACD60549DCBF5 /* DAFileMonitor.framework */; };
+		0B0D71B7EB8B1592FD3B9B0F47BB2D94 /* DAFileMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB7A6D66516B8AD6380F0391A6A025 /* DAFileMonitor.swift */; };
+		0D852D4C03245F2E761511B1120E33A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		0E510AA18D2102B373BCF3A6D0EF01F6 /* BBPortal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DB28E1E286F45C86BF85448F421F3 /* BBPortal.swift */; };
+		1A4B391B8B0CE4EB2EF6FCE0565F5586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		1BAE33A7A9CABFC8BE2FC0165E8BD60E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		20AFAABCA47D9F8A870256484633D6F6 /* DAFileMonitor-iOS11.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F68932D09F9897062F9DCA44911B01D2 /* DAFileMonitor-iOS11.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26A6B2FE3A2BE9DC48BC7C48378A8120 /* BBPortal-iOS11.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4FE3CB66C8126123AF907F56A0A6239 /* BBPortal-iOS11.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E53F65E2BF2A7BEF0AC7330833FBD9E /* Pods-SimpleAppBroadCastUploadExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 391EC06CBEDC14FAE0A6AD8219CA258D /* Pods-SimpleAppBroadCastUploadExtension-dummy.m */; };
+		40CF1CC231789426F5D1E85D15CBEE26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		448DF796DE9B2E2D731666851411BA15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		46767BE52BCC15D88650B5A18F3574A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		49870A9530F3FB2C7B7BCDF22749F0CD /* BBPortal-iOS12.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ED611019FB77D19F8B2EDFEFCB231F /* BBPortal-iOS12.0-dummy.m */; };
+		53D0D971A2329BF1681961DB21C8F0AE /* Pods-SimpleAppExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A86390E31EB6BD15115E632EEDC4C04A /* Pods-SimpleAppExtension-dummy.m */; };
+		5900CC7B171D0536AC65382BE9277E7C /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF071EE79E7180B4D537CE5DD39A5BA /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B3886AFFC6332F51A4DB5919E6B170D /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CFE5E2E793494F1200DFB4CAB6F8E1 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-dummy.m */; };
+		82631378C8301E349F2BC57B95CFB4DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		87788BBE55D0B2233E8AC444CDEA9B1A /* Pods-SimpleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4534727D90B4B0770E2D6D325F149E /* Pods-SimpleApp-dummy.m */; };
+		914449AF4E30B5D0BB463310021F26FC /* DAFileMonitor-iOS12.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F447362A0AAB6DB942809E785AB21654 /* DAFileMonitor-iOS12.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		973AC21D94F9C0D64590A4A536E0C357 /* BBPortal-iOS11.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F65F81905E3FEC457003AC589B7E7D23 /* BBPortal-iOS11.0-dummy.m */; };
+		9DF48F320165BDE252CFC17757331ECB /* BBPortal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DB28E1E286F45C86BF85448F421F3 /* BBPortal.swift */; };
+		B636CD8211AE94804AC5E9360CF1F0DB /* Pods-SimpleAppBroadCastUploadExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BAF1AFAA67051FD4623A8EA8864DA8A /* Pods-SimpleAppBroadCastUploadExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70A34253140EDE56D7BCDA69F922A4F /* DAFileMonitor-iOS12.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABC347BDA5352CB1710A4229A5D6477 /* DAFileMonitor-iOS12.0-dummy.m */; };
+		C7A49AA72871DFEE93C1AA3FEAE41B36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF200549D567984B45A10418E46A920 /* Foundation.framework */; };
+		D31463585FF3E11FD915D94D3D7B4F5F /* DAFileMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB7A6D66516B8AD6380F0391A6A025 /* DAFileMonitor.swift */; };
+		E815612F6F10126AD3E317B37BF6DF08 /* DAFileMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEE4A9E0A4597E8D6CACD60549DCBF5 /* DAFileMonitor.framework */; };
+		F2F4AE96F0E160989955A542BAF23C74 /* Pods-SimpleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0675F1C782E95CB429225F997EBBF941 /* Pods-SimpleApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F59A7428039DBFA9C562F40614C4A6E2 /* DAFileMonitor-iOS11.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDFA6964EC6E8098844A6935F36EBFE5 /* DAFileMonitor-iOS11.0-dummy.m */; };
+		F75EA822F584B3FC509CAC8565A5B761 /* Pods-SimpleAppExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36902347356A7D11ED7EDCA65C97651A /* Pods-SimpleAppExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEEEF21970049ED70B81AFE0A8B5544C /* BBPortal-iOS12.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7A38E2049E2CDB144924E8729EB23B /* BBPortal-iOS12.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184964D782BD83643D08CD3FB39ED544 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940EEFB97C17B91B261BE5FD7E7F4F9E;
+			remoteInfo = "DAFileMonitor-iOS11.0";
+		};
+		2F4B71239AC14EE0C81E16FF4B785A7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7388E0AA880456B24A9FDD3D7AE7A04;
+			remoteInfo = "BBPortal-iOS11.0";
+		};
+		44267697EDCB62DF08BBBDE94F3A8A4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940EEFB97C17B91B261BE5FD7E7F4F9E;
+			remoteInfo = "DAFileMonitor-iOS11.0";
+		};
+		56251B2127E000FE5DF289FDDEEB8795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A628AECF882B3BB595BA135050370D;
+			remoteInfo = "DAFileMonitor-iOS12.0";
+		};
+		B57C4C1B57261D3D4B3E1576E0F159FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58A628AECF882B3BB595BA135050370D;
+			remoteInfo = "DAFileMonitor-iOS12.0";
+		};
+		B9474519B57504F758E1901CF7936E35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 940EEFB97C17B91B261BE5FD7E7F4F9E;
+			remoteInfo = "DAFileMonitor-iOS11.0";
+		};
+		E2EBD42BA98D267350161786FB146FF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA773BCFC4DA528DFE9E4C18BCCC878B;
+			remoteInfo = "BBPortal-iOS12.0";
+		};
+		FA5253940D3635B898F03D7DF1393616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA773BCFC4DA528DFE9E4C18BCCC878B;
+			remoteInfo = "BBPortal-iOS12.0";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05CFC977CB7C20CE6ABA05541CBB247A /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI.modulemap"; sourceTree = "<group>"; };
+		0675F1C782E95CB429225F997EBBF941 /* Pods-SimpleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleApp-umbrella.h"; sourceTree = "<group>"; };
+		1B60C8347049B17A92F7AC53D6611CCE /* Pods-SimpleAppExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleAppExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		20AB7A6D66516B8AD6380F0391A6A025 /* DAFileMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DAFileMonitor.swift; path = DAFileMonitor/Classes/DAFileMonitor.swift; sourceTree = "<group>"; };
+		21ED611019FB77D19F8B2EDFEFCB231F /* BBPortal-iOS12.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BBPortal-iOS12.0-dummy.m"; path = "../BBPortal-iOS12.0/BBPortal-iOS12.0-dummy.m"; sourceTree = "<group>"; };
+		25FC83A7C4473F00CE7636DED7F1253E /* Pods-SimpleAppExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleAppExtension-Info.plist"; sourceTree = "<group>"; };
+		2ABC347BDA5352CB1710A4229A5D6477 /* DAFileMonitor-iOS12.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DAFileMonitor-iOS12.0-dummy.m"; path = "../DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-dummy.m"; sourceTree = "<group>"; };
+		2DB16E169279C0C2B86BCB10333AEC5C /* DAFileMonitor-iOS11.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DAFileMonitor-iOS11.0.xcconfig"; sourceTree = "<group>"; };
+		2E2B373F127C03770E0D7154574900A5 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI-Info.plist"; sourceTree = "<group>"; };
+		2FE781CAAF9A356448E7C8434BA77539 /* DAFileMonitor-iOS11.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DAFileMonitor-iOS11.0-prefix.pch"; sourceTree = "<group>"; };
+		36902347356A7D11ED7EDCA65C97651A /* Pods-SimpleAppExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleAppExtension-umbrella.h"; sourceTree = "<group>"; };
+		376F9BE32A8F029E1D20D4BF015F9CF2 /* Pods-SimpleAppExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleAppExtension.modulemap"; sourceTree = "<group>"; };
+		391EC06CBEDC14FAE0A6AD8219CA258D /* Pods-SimpleAppBroadCastUploadExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleAppBroadCastUploadExtension-dummy.m"; sourceTree = "<group>"; };
+		39D92526CF94E01A9DB9567A9FF6BB6C /* Pods-SimpleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3DA5908A12D15F65D1D2CB5E89CB013C /* BBPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BBPortal.framework; path = "BBPortal-iOS11.0.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4195ABF629F2B216238832B4150A80C8 /* Pods-SimpleAppBroadCastUploadExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAppBroadCastUploadExtension.release.xcconfig"; sourceTree = "<group>"; };
+		4925AED0ABEBD3F0A18BFC695E191D54 /* Pods-SimpleAppBroadCastUploadExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleAppBroadCastUploadExtension-Info.plist"; sourceTree = "<group>"; };
+		49B24DA3F87D591ED3D90F0C445B2354 /* BBPortal-iOS12.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "BBPortal-iOS12.0.modulemap"; path = "../BBPortal-iOS12.0/BBPortal-iOS12.0.modulemap"; sourceTree = "<group>"; };
+		4AEE4A9E0A4597E8D6CACD60549DCBF5 /* DAFileMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DAFileMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A729FF98FFD355CB88201B209FD628 /* Pods_SimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleApp.framework; path = "Pods-SimpleApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54D215CF7E844A54A55E8DE4A6E5E9B1 /* Pods-SimpleAppBroadCastUploadExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAppBroadCastUploadExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		550508B8607E6702EA66937252041375 /* Pods-SimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		58D7290D452901DD1B695FFE817F47F7 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		60489668B957C6B3A7222FB830D92C76 /* Pods-SimpleAppBroadCastUploadExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleAppBroadCastUploadExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		63EF7B1B610DA9D2CEF7F1F1C7F6034C /* Pods-SimpleAppExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleAppExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		643F0A613305A64709F170BD7933A72B /* Pods_SimpleAppBroadCastUploadExtensionSetupUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleAppBroadCastUploadExtensionSetupUI.framework; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		654F110BDE166AC1678C87A96A871516 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig"; sourceTree = "<group>"; };
+		662813044324BC73D392B7A25B5D7DD1 /* Pods-SimpleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleApp.modulemap"; sourceTree = "<group>"; };
+		68477F4F98925A68B241D6ACC072641F /* BBPortal-iOS11.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "BBPortal-iOS11.0.xcconfig"; sourceTree = "<group>"; };
+		69A375051E5F53119CBA1CD0D8384D38 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI-acknowledgements.plist"; sourceTree = "<group>"; };
+		6BF071EE79E7180B4D537CE5DD39A5BA /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI-umbrella.h"; sourceTree = "<group>"; };
+		6EF2C60F121BF106C9AE8B89C930969D /* Pods-SimpleAppBroadCastUploadExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleAppBroadCastUploadExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6F0694D36B502F02B8AB937AB6C23C57 /* BBPortal-iOS11.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BBPortal-iOS11.0-Info.plist"; sourceTree = "<group>"; };
+		74F88D4A18D54912D1F50DA2EE787B06 /* DAFileMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DAFileMonitor.framework; path = "DAFileMonitor-iOS12.0.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		780E28EBD6D0015CD721BC95768C3E0F /* DAFileMonitor-iOS12.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "DAFileMonitor-iOS12.0-Info.plist"; path = "../DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-Info.plist"; sourceTree = "<group>"; };
+		7A7CB7D70FD49610ABEDABFDBC682AEA /* DAFileMonitor-iOS11.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DAFileMonitor-iOS11.0-Info.plist"; sourceTree = "<group>"; };
+		7D5E3291669FE4B670AC5A4654CD7AE7 /* BBPortal-iOS11.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBPortal-iOS11.0-prefix.pch"; sourceTree = "<group>"; };
+		7EDA181E0063C7F72E515174E95AC958 /* DAFileMonitor-iOS12.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DAFileMonitor-iOS12.0-prefix.pch"; path = "../DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-prefix.pch"; sourceTree = "<group>"; };
+		8239C16837D51497726EBEE5160158F7 /* Pods-SimpleAppExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAppExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		83E0E82D2AEDFA54E6695A59719F05C0 /* BBPortal-iOS12.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "BBPortal-iOS12.0.xcconfig"; path = "../BBPortal-iOS12.0/BBPortal-iOS12.0.xcconfig"; sourceTree = "<group>"; };
+		87B13212A3E7E49FEAF34EB1FE4A32DD /* Pods-SimpleApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleApp-Info.plist"; sourceTree = "<group>"; };
+		8E13EF532CBDB8397C79FF955B616232 /* Pods-SimpleAppBroadCastUploadExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleAppBroadCastUploadExtension.modulemap"; sourceTree = "<group>"; };
+		8E67B62343EBB0C2609687DE7E49D035 /* BBPortal-iOS11.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "BBPortal-iOS11.0.modulemap"; sourceTree = "<group>"; };
+		9BAF1AFAA67051FD4623A8EA8864DA8A /* Pods-SimpleAppBroadCastUploadExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleAppBroadCastUploadExtension-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A09168605E7BD7F633FC21AB55E9ECDC /* BBPortal-iOS12.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BBPortal-iOS12.0-prefix.pch"; path = "../BBPortal-iOS12.0/BBPortal-iOS12.0-prefix.pch"; sourceTree = "<group>"; };
+		A32C64E05403C91938E6749ECFCA4199 /* BBPortal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BBPortal.framework; path = "BBPortal-iOS12.0.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4029C328CF9C44C797FBEDB089B4660 /* DAFileMonitor-iOS12.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "DAFileMonitor-iOS12.0.modulemap"; path = "../DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0.modulemap"; sourceTree = "<group>"; };
+		A607043E25BD81FF764DD67891D00623 /* DAFileMonitor-iOS11.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "DAFileMonitor-iOS11.0.modulemap"; sourceTree = "<group>"; };
+		A86390E31EB6BD15115E632EEDC4C04A /* Pods-SimpleAppExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleAppExtension-dummy.m"; sourceTree = "<group>"; };
+		A8C1B1F15D1D2A9BE4D66B8324AB2542 /* Pods_SimpleAppBroadCastUploadExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleAppBroadCastUploadExtension.framework; path = "Pods-SimpleAppBroadCastUploadExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BA85B26377767F0DC015953437DF85 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI.debug.xcconfig"; sourceTree = "<group>"; };
+		AD4534727D90B4B0770E2D6D325F149E /* Pods-SimpleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleApp-dummy.m"; sourceTree = "<group>"; };
+		B4FE3CB66C8126123AF907F56A0A6239 /* BBPortal-iOS11.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBPortal-iOS11.0-umbrella.h"; sourceTree = "<group>"; };
+		BB6078FDD0ED6792BC1C4D56C93CD9D1 /* DAFileMonitor-iOS12.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "DAFileMonitor-iOS12.0.xcconfig"; path = "../DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0.xcconfig"; sourceTree = "<group>"; };
+		C833587893D608F54F93F3F904D703F6 /* Pods-SimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleApp.release.xcconfig"; sourceTree = "<group>"; };
+		CB985D644506EB33E39662BFCF0B42F1 /* Pods-SimpleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		CDFA6964EC6E8098844A6935F36EBFE5 /* DAFileMonitor-iOS11.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DAFileMonitor-iOS11.0-dummy.m"; sourceTree = "<group>"; };
+		D391BAC064A16F44D4AE11E674F8CE88 /* Pods_SimpleAppExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleAppExtension.framework; path = "Pods-SimpleAppExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FB816F8E97528F3DE0CC95496F16BB /* DAFileMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DAFileMonitor.framework; path = "DAFileMonitor-iOS11.0.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C18AFE41E80BC63A875EEDDC9F3D70 /* Pods-SimpleApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleApp-frameworks.sh"; sourceTree = "<group>"; };
+		D6CFE5E2E793494F1200DFB4CAB6F8E1 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleAppBroadCastUploadExtensionSetupUI-dummy.m"; sourceTree = "<group>"; };
+		E20DB28E1E286F45C86BF85448F421F3 /* BBPortal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBPortal.swift; path = BBPortal/Classes/BBPortal.swift; sourceTree = "<group>"; };
+		E3B4A9CE0687DAF0744218A6C3592D36 /* BBPortal-iOS12.0-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "BBPortal-iOS12.0-Info.plist"; path = "../BBPortal-iOS12.0/BBPortal-iOS12.0-Info.plist"; sourceTree = "<group>"; };
+		EFF200549D567984B45A10418E46A920 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F447362A0AAB6DB942809E785AB21654 /* DAFileMonitor-iOS12.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DAFileMonitor-iOS12.0-umbrella.h"; path = "../DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-umbrella.h"; sourceTree = "<group>"; };
+		F65F81905E3FEC457003AC589B7E7D23 /* BBPortal-iOS11.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BBPortal-iOS11.0-dummy.m"; sourceTree = "<group>"; };
+		F68932D09F9897062F9DCA44911B01D2 /* DAFileMonitor-iOS11.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DAFileMonitor-iOS11.0-umbrella.h"; sourceTree = "<group>"; };
+		F699CDBBA975CF4EC88880A3EBACDC09 /* Pods-SimpleAppExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleAppExtension.release.xcconfig"; sourceTree = "<group>"; };
+		FE7A38E2049E2CDB144924E8729EB23B /* BBPortal-iOS12.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BBPortal-iOS12.0-umbrella.h"; path = "../BBPortal-iOS12.0/BBPortal-iOS12.0-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		023446DF1DA3B1B8BAA425DA14810D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0950D05716C7F7266FE2302B8A849DBE /* DAFileMonitor.framework in Frameworks */,
+				1A4B391B8B0CE4EB2EF6FCE0565F5586 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56B424EE27ABB091CC02F4677EEE36A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82631378C8301E349F2BC57B95CFB4DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6954C615B44D5068A6F1A297006DD896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BAE33A7A9CABFC8BE2FC0165E8BD60E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		793D0A7E6B3F5FCDF62888E7ABA1E3FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				448DF796DE9B2E2D731666851411BA15 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACF1CC5B34CE44989D4A8BCB2E34B4F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E815612F6F10126AD3E317B37BF6DF08 /* DAFileMonitor.framework in Frameworks */,
+				0D852D4C03245F2E761511B1120E33A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF1F1B11288472E782505D38E9519F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40CF1CC231789426F5D1E85D15CBEE26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D30F62E79CF5F9E610A68F46C2A51DDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7A49AA72871DFEE93C1AA3FEAE41B36 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBFE71ADED09AAC0930797235820CBFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46767BE52BCC15D88650B5A18F3574A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09451650DFF82644B14DBDC70E31FF5B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E35B0DDB4F6FAB726DA8A6A8BC472C1E /* Pods-SimpleApp */,
+				F1A1813D3FC5739B3C92F03250126EBF /* Pods-SimpleAppBroadCastUploadExtension */,
+				56B0FD484B7D79DF4E7360DBFA695866 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI */,
+				DF593DE8A5FE0150D718881F2101E20F /* Pods-SimpleAppExtension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4E9DA7E635F0B82D021A4300B72DE04F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DA5908A12D15F65D1D2CB5E89CB013C /* BBPortal.framework */,
+				A32C64E05403C91938E6749ECFCA4199 /* BBPortal.framework */,
+				D5FB816F8E97528F3DE0CC95496F16BB /* DAFileMonitor.framework */,
+				74F88D4A18D54912D1F50DA2EE787B06 /* DAFileMonitor.framework */,
+				54A729FF98FFD355CB88201B209FD628 /* Pods_SimpleApp.framework */,
+				A8C1B1F15D1D2A9BE4D66B8324AB2542 /* Pods_SimpleAppBroadCastUploadExtension.framework */,
+				643F0A613305A64709F170BD7933A72B /* Pods_SimpleAppBroadCastUploadExtensionSetupUI.framework */,
+				D391BAC064A16F44D4AE11E674F8CE88 /* Pods_SimpleAppExtension.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55C96AE319842A924430F5846D61063F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E67B62343EBB0C2609687DE7E49D035 /* BBPortal-iOS11.0.modulemap */,
+				68477F4F98925A68B241D6ACC072641F /* BBPortal-iOS11.0.xcconfig */,
+				F65F81905E3FEC457003AC589B7E7D23 /* BBPortal-iOS11.0-dummy.m */,
+				6F0694D36B502F02B8AB937AB6C23C57 /* BBPortal-iOS11.0-Info.plist */,
+				7D5E3291669FE4B670AC5A4654CD7AE7 /* BBPortal-iOS11.0-prefix.pch */,
+				B4FE3CB66C8126123AF907F56A0A6239 /* BBPortal-iOS11.0-umbrella.h */,
+				49B24DA3F87D591ED3D90F0C445B2354 /* BBPortal-iOS12.0.modulemap */,
+				83E0E82D2AEDFA54E6695A59719F05C0 /* BBPortal-iOS12.0.xcconfig */,
+				21ED611019FB77D19F8B2EDFEFCB231F /* BBPortal-iOS12.0-dummy.m */,
+				E3B4A9CE0687DAF0744218A6C3592D36 /* BBPortal-iOS12.0-Info.plist */,
+				A09168605E7BD7F633FC21AB55E9ECDC /* BBPortal-iOS12.0-prefix.pch */,
+				FE7A38E2049E2CDB144924E8729EB23B /* BBPortal-iOS12.0-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BBPortal-iOS11.0";
+			sourceTree = "<group>";
+		};
+		56B0FD484B7D79DF4E7360DBFA695866 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				05CFC977CB7C20CE6ABA05541CBB247A /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.modulemap */,
+				58D7290D452901DD1B695FFE817F47F7 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-acknowledgements.markdown */,
+				69A375051E5F53119CBA1CD0D8384D38 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-acknowledgements.plist */,
+				D6CFE5E2E793494F1200DFB4CAB6F8E1 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-dummy.m */,
+				2E2B373F127C03770E0D7154574900A5 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-Info.plist */,
+				6BF071EE79E7180B4D537CE5DD39A5BA /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-umbrella.h */,
+				A9BA85B26377767F0DC015953437DF85 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.debug.xcconfig */,
+				654F110BDE166AC1678C87A96A871516 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig */,
+			);
+			name = "Pods-SimpleAppBroadCastUploadExtensionSetupUI";
+			path = "Target Support Files/Pods-SimpleAppBroadCastUploadExtensionSetupUI";
+			sourceTree = "<group>";
+		};
+		9A869C047ECB1C13468CFF00B56AFD6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AEE4A9E0A4597E8D6CACD60549DCBF5 /* DAFileMonitor.framework */,
+				AC35C6CC9D2982AAE274F88ADB22F867 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6EAD5D096D0430A1DC5923196682F20 /* DAFileMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				20AB7A6D66516B8AD6380F0391A6A025 /* DAFileMonitor.swift */,
+				FDEFAC23A9F73DD456D46713C4252FA0 /* Support Files */,
+			);
+			name = DAFileMonitor;
+			path = DAFileMonitor;
+			sourceTree = "<group>";
+		};
+		AC35C6CC9D2982AAE274F88ADB22F867 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EFF200549D567984B45A10418E46A920 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CC4E9E216828ECD7EB3BD9CBDCB99B59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F694356F7DCBC3A8FE5C7687A1F5FA9A /* BBPortal */,
+				A6EAD5D096D0430A1DC5923196682F20 /* DAFileMonitor */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				9A869C047ECB1C13468CFF00B56AFD6C /* Frameworks */,
+				CC4E9E216828ECD7EB3BD9CBDCB99B59 /* Pods */,
+				4E9DA7E635F0B82D021A4300B72DE04F /* Products */,
+				09451650DFF82644B14DBDC70E31FF5B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DF593DE8A5FE0150D718881F2101E20F /* Pods-SimpleAppExtension */ = {
+			isa = PBXGroup;
+			children = (
+				376F9BE32A8F029E1D20D4BF015F9CF2 /* Pods-SimpleAppExtension.modulemap */,
+				63EF7B1B610DA9D2CEF7F1F1C7F6034C /* Pods-SimpleAppExtension-acknowledgements.markdown */,
+				1B60C8347049B17A92F7AC53D6611CCE /* Pods-SimpleAppExtension-acknowledgements.plist */,
+				A86390E31EB6BD15115E632EEDC4C04A /* Pods-SimpleAppExtension-dummy.m */,
+				25FC83A7C4473F00CE7636DED7F1253E /* Pods-SimpleAppExtension-Info.plist */,
+				36902347356A7D11ED7EDCA65C97651A /* Pods-SimpleAppExtension-umbrella.h */,
+				8239C16837D51497726EBEE5160158F7 /* Pods-SimpleAppExtension.debug.xcconfig */,
+				F699CDBBA975CF4EC88880A3EBACDC09 /* Pods-SimpleAppExtension.release.xcconfig */,
+			);
+			name = "Pods-SimpleAppExtension";
+			path = "Target Support Files/Pods-SimpleAppExtension";
+			sourceTree = "<group>";
+		};
+		E35B0DDB4F6FAB726DA8A6A8BC472C1E /* Pods-SimpleApp */ = {
+			isa = PBXGroup;
+			children = (
+				662813044324BC73D392B7A25B5D7DD1 /* Pods-SimpleApp.modulemap */,
+				39D92526CF94E01A9DB9567A9FF6BB6C /* Pods-SimpleApp-acknowledgements.markdown */,
+				CB985D644506EB33E39662BFCF0B42F1 /* Pods-SimpleApp-acknowledgements.plist */,
+				AD4534727D90B4B0770E2D6D325F149E /* Pods-SimpleApp-dummy.m */,
+				D6C18AFE41E80BC63A875EEDDC9F3D70 /* Pods-SimpleApp-frameworks.sh */,
+				87B13212A3E7E49FEAF34EB1FE4A32DD /* Pods-SimpleApp-Info.plist */,
+				0675F1C782E95CB429225F997EBBF941 /* Pods-SimpleApp-umbrella.h */,
+				550508B8607E6702EA66937252041375 /* Pods-SimpleApp.debug.xcconfig */,
+				C833587893D608F54F93F3F904D703F6 /* Pods-SimpleApp.release.xcconfig */,
+			);
+			name = "Pods-SimpleApp";
+			path = "Target Support Files/Pods-SimpleApp";
+			sourceTree = "<group>";
+		};
+		F1A1813D3FC5739B3C92F03250126EBF /* Pods-SimpleAppBroadCastUploadExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8E13EF532CBDB8397C79FF955B616232 /* Pods-SimpleAppBroadCastUploadExtension.modulemap */,
+				6EF2C60F121BF106C9AE8B89C930969D /* Pods-SimpleAppBroadCastUploadExtension-acknowledgements.markdown */,
+				60489668B957C6B3A7222FB830D92C76 /* Pods-SimpleAppBroadCastUploadExtension-acknowledgements.plist */,
+				391EC06CBEDC14FAE0A6AD8219CA258D /* Pods-SimpleAppBroadCastUploadExtension-dummy.m */,
+				4925AED0ABEBD3F0A18BFC695E191D54 /* Pods-SimpleAppBroadCastUploadExtension-Info.plist */,
+				9BAF1AFAA67051FD4623A8EA8864DA8A /* Pods-SimpleAppBroadCastUploadExtension-umbrella.h */,
+				54D215CF7E844A54A55E8DE4A6E5E9B1 /* Pods-SimpleAppBroadCastUploadExtension.debug.xcconfig */,
+				4195ABF629F2B216238832B4150A80C8 /* Pods-SimpleAppBroadCastUploadExtension.release.xcconfig */,
+			);
+			name = "Pods-SimpleAppBroadCastUploadExtension";
+			path = "Target Support Files/Pods-SimpleAppBroadCastUploadExtension";
+			sourceTree = "<group>";
+		};
+		F694356F7DCBC3A8FE5C7687A1F5FA9A /* BBPortal */ = {
+			isa = PBXGroup;
+			children = (
+				E20DB28E1E286F45C86BF85448F421F3 /* BBPortal.swift */,
+				55C96AE319842A924430F5846D61063F /* Support Files */,
+			);
+			name = BBPortal;
+			path = BBPortal;
+			sourceTree = "<group>";
+		};
+		FDEFAC23A9F73DD456D46713C4252FA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A607043E25BD81FF764DD67891D00623 /* DAFileMonitor-iOS11.0.modulemap */,
+				2DB16E169279C0C2B86BCB10333AEC5C /* DAFileMonitor-iOS11.0.xcconfig */,
+				CDFA6964EC6E8098844A6935F36EBFE5 /* DAFileMonitor-iOS11.0-dummy.m */,
+				7A7CB7D70FD49610ABEDABFDBC682AEA /* DAFileMonitor-iOS11.0-Info.plist */,
+				2FE781CAAF9A356448E7C8434BA77539 /* DAFileMonitor-iOS11.0-prefix.pch */,
+				F68932D09F9897062F9DCA44911B01D2 /* DAFileMonitor-iOS11.0-umbrella.h */,
+				A4029C328CF9C44C797FBEDB089B4660 /* DAFileMonitor-iOS12.0.modulemap */,
+				BB6078FDD0ED6792BC1C4D56C93CD9D1 /* DAFileMonitor-iOS12.0.xcconfig */,
+				2ABC347BDA5352CB1710A4229A5D6477 /* DAFileMonitor-iOS12.0-dummy.m */,
+				780E28EBD6D0015CD721BC95768C3E0F /* DAFileMonitor-iOS12.0-Info.plist */,
+				7EDA181E0063C7F72E515174E95AC958 /* DAFileMonitor-iOS12.0-prefix.pch */,
+				F447362A0AAB6DB942809E785AB21654 /* DAFileMonitor-iOS12.0-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DAFileMonitor-iOS11.0";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0DBF886EFDCB68C3A409372160065B5A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A6B2FE3A2BE9DC48BC7C48378A8120 /* BBPortal-iOS11.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16133A2EAF80A63CC8FCB3A6F20CB3BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEEEF21970049ED70B81AFE0A8B5544C /* BBPortal-iOS12.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A4B6A8DD34179068FE5B989A4B4E669 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F75EA822F584B3FC509CAC8565A5B761 /* Pods-SimpleAppExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F23D51AF9CEB1F835A0E82D7BBC16F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2F4AE96F0E160989955A542BAF23C74 /* Pods-SimpleApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23A89C8B29FB174A13786E9DDCE4CB0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B636CD8211AE94804AC5E9360CF1F0DB /* Pods-SimpleAppBroadCastUploadExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A04FCE64D206284089173BE70290D9E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5900CC7B171D0536AC65382BE9277E7C /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA75C2B541D6E892DB73897F637C27D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				914449AF4E30B5D0BB463310021F26FC /* DAFileMonitor-iOS12.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C205B9796BDCA3ABFD34985983392096 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20AFAABCA47D9F8A870256484633D6F6 /* DAFileMonitor-iOS11.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		03701D243D2E6FBC87E5E55076083A3E /* Pods-SimpleAppBroadCastUploadExtensionSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67795A63DBBF92B949E6A889D5B82466 /* Build configuration list for PBXNativeTarget "Pods-SimpleAppBroadCastUploadExtensionSetupUI" */;
+			buildPhases = (
+				A04FCE64D206284089173BE70290D9E9 /* Headers */,
+				0CC07C33A1F8B8C327E5BCA14B0DD2B4 /* Sources */,
+				6954C615B44D5068A6F1A297006DD896 /* Frameworks */,
+				B17CAC70F389FD50964587DBFAAFAFD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B322A0F1C4DE968DCD24F96F1EB227AB /* PBXTargetDependency */,
+				2F5D4483CA8DAFBE8145C9BC4DF66B3A /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleAppBroadCastUploadExtensionSetupUI";
+			productName = "Pods-SimpleAppBroadCastUploadExtensionSetupUI";
+			productReference = 643F0A613305A64709F170BD7933A72B /* Pods_SimpleAppBroadCastUploadExtensionSetupUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		366645A4C44E9C0C49081F34BD6EFC13 /* Pods-SimpleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B73B47368A70A920C74E70E212A44486 /* Build configuration list for PBXNativeTarget "Pods-SimpleApp" */;
+			buildPhases = (
+				1F23D51AF9CEB1F835A0E82D7BBC16F6 /* Headers */,
+				EF85FF0A2A5E120D2A45CF403C6596A9 /* Sources */,
+				DBFE71ADED09AAC0930797235820CBFA /* Frameworks */,
+				F766C4483FC96A3BB4E810B8B1E57851 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9527F9CC1B05982B069E524FEFB589F7 /* PBXTargetDependency */,
+				6169D037116AD74F2DBE4C771C5FFF59 /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleApp";
+			productName = "Pods-SimpleApp";
+			productReference = 54A729FF98FFD355CB88201B209FD628 /* Pods_SimpleApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		58A628AECF882B3BB595BA135050370D /* DAFileMonitor-iOS12.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7A6A6B1D77339BE2F0DE77DAAE68F76 /* Build configuration list for PBXNativeTarget "DAFileMonitor-iOS12.0" */;
+			buildPhases = (
+				AA75C2B541D6E892DB73897F637C27D2 /* Headers */,
+				17C328DEA1DC7C94C1A162C3EC69E713 /* Sources */,
+				CAF1F1B11288472E782505D38E9519F6 /* Frameworks */,
+				A9F02B176120E51F2DBEC78CF9B90FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DAFileMonitor-iOS12.0";
+			productName = "DAFileMonitor-iOS12.0";
+			productReference = 74F88D4A18D54912D1F50DA2EE787B06 /* DAFileMonitor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		940EEFB97C17B91B261BE5FD7E7F4F9E /* DAFileMonitor-iOS11.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8A56B50A0A0DC664F34CD8EDA61FED /* Build configuration list for PBXNativeTarget "DAFileMonitor-iOS11.0" */;
+			buildPhases = (
+				C205B9796BDCA3ABFD34985983392096 /* Headers */,
+				9DE96C680CEF11EC95018CF7B398A3EF /* Sources */,
+				56B424EE27ABB091CC02F4677EEE36A7 /* Frameworks */,
+				EE61D50F604D559930FA94462DBD0A60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DAFileMonitor-iOS11.0";
+			productName = "DAFileMonitor-iOS11.0";
+			productReference = D5FB816F8E97528F3DE0CC95496F16BB /* DAFileMonitor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99B290EE7B770AD35607CCA632C4BEDE /* Pods-SimpleAppExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC844EC3A96D20EDCA160C0C79E70E9 /* Build configuration list for PBXNativeTarget "Pods-SimpleAppExtension" */;
+			buildPhases = (
+				1A4B6A8DD34179068FE5B989A4B4E669 /* Headers */,
+				19CD97ADE463BBC0F80C9E6D567B3434 /* Sources */,
+				793D0A7E6B3F5FCDF62888E7ABA1E3FE /* Frameworks */,
+				C8DBFA5CFF01A9BE6D7FB0AC546CD919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SimpleAppExtension";
+			productName = "Pods-SimpleAppExtension";
+			productReference = D391BAC064A16F44D4AE11E674F8CE88 /* Pods_SimpleAppExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D7388E0AA880456B24A9FDD3D7AE7A04 /* BBPortal-iOS11.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1FDB67C91B91DC74B842495219B72F6 /* Build configuration list for PBXNativeTarget "BBPortal-iOS11.0" */;
+			buildPhases = (
+				0DBF886EFDCB68C3A409372160065B5A /* Headers */,
+				7890DEA3CD163A913A9291CBA0605594 /* Sources */,
+				023446DF1DA3B1B8BAA425DA14810D27 /* Frameworks */,
+				7DBEF0AC5F6B9AF41AE52851EFFBC811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35E97F7EDE7CD94954F1E9CC1A9CEEB0 /* PBXTargetDependency */,
+			);
+			name = "BBPortal-iOS11.0";
+			productName = "BBPortal-iOS11.0";
+			productReference = 3DA5908A12D15F65D1D2CB5E89CB013C /* BBPortal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8B1E61AE664644B2D090F31BE677D1A /* Pods-SimpleAppBroadCastUploadExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E53A580B8C272C62DE02119EEDAB3D7 /* Build configuration list for PBXNativeTarget "Pods-SimpleAppBroadCastUploadExtension" */;
+			buildPhases = (
+				23A89C8B29FB174A13786E9DDCE4CB0F /* Headers */,
+				FE36B4B96B125A1304754E8FCA981578 /* Sources */,
+				D30F62E79CF5F9E610A68F46C2A51DDD /* Frameworks */,
+				94EB49900831A485BD35407EF7EBEEEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A844DC119BEA6C49116DA07DB7951BAC /* PBXTargetDependency */,
+				9689DA8E84513BF254B9445456895582 /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleAppBroadCastUploadExtension";
+			productName = "Pods-SimpleAppBroadCastUploadExtension";
+			productReference = A8C1B1F15D1D2A9BE4D66B8324AB2542 /* Pods_SimpleAppBroadCastUploadExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA773BCFC4DA528DFE9E4C18BCCC878B /* BBPortal-iOS12.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C452AD9EB40C9B9A3EC1945A790F553E /* Build configuration list for PBXNativeTarget "BBPortal-iOS12.0" */;
+			buildPhases = (
+				16133A2EAF80A63CC8FCB3A6F20CB3BD /* Headers */,
+				517A92BA874D4B704CB548B6574B6D0D /* Sources */,
+				ACF1CC5B34CE44989D4A8BCB2E34B4F5 /* Frameworks */,
+				A1CF2EEAC495641BCBEEA23D55BED074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				830D041849A149649D3B82291D9628F8 /* PBXTargetDependency */,
+			);
+			name = "BBPortal-iOS12.0";
+			productName = "BBPortal-iOS12.0";
+			productReference = A32C64E05403C91938E6749ECFCA4199 /* BBPortal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4E9DA7E635F0B82D021A4300B72DE04F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7388E0AA880456B24A9FDD3D7AE7A04 /* BBPortal-iOS11.0 */,
+				FA773BCFC4DA528DFE9E4C18BCCC878B /* BBPortal-iOS12.0 */,
+				940EEFB97C17B91B261BE5FD7E7F4F9E /* DAFileMonitor-iOS11.0 */,
+				58A628AECF882B3BB595BA135050370D /* DAFileMonitor-iOS12.0 */,
+				366645A4C44E9C0C49081F34BD6EFC13 /* Pods-SimpleApp */,
+				E8B1E61AE664644B2D090F31BE677D1A /* Pods-SimpleAppBroadCastUploadExtension */,
+				03701D243D2E6FBC87E5E55076083A3E /* Pods-SimpleAppBroadCastUploadExtensionSetupUI */,
+				99B290EE7B770AD35607CCA632C4BEDE /* Pods-SimpleAppExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DBEF0AC5F6B9AF41AE52851EFFBC811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94EB49900831A485BD35407EF7EBEEEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1CF2EEAC495641BCBEEA23D55BED074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F02B176120E51F2DBEC78CF9B90FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17CAC70F389FD50964587DBFAAFAFD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8DBFA5CFF01A9BE6D7FB0AC546CD919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE61D50F604D559930FA94462DBD0A60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F766C4483FC96A3BB4E810B8B1E57851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CC07C33A1F8B8C327E5BCA14B0DD2B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B3886AFFC6332F51A4DB5919E6B170D /* Pods-SimpleAppBroadCastUploadExtensionSetupUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C328DEA1DC7C94C1A162C3EC69E713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70A34253140EDE56D7BCDA69F922A4F /* DAFileMonitor-iOS12.0-dummy.m in Sources */,
+				0B0D71B7EB8B1592FD3B9B0F47BB2D94 /* DAFileMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CD97ADE463BBC0F80C9E6D567B3434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D0D971A2329BF1681961DB21C8F0AE /* Pods-SimpleAppExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517A92BA874D4B704CB548B6574B6D0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49870A9530F3FB2C7B7BCDF22749F0CD /* BBPortal-iOS12.0-dummy.m in Sources */,
+				9DF48F320165BDE252CFC17757331ECB /* BBPortal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7890DEA3CD163A913A9291CBA0605594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				973AC21D94F9C0D64590A4A536E0C357 /* BBPortal-iOS11.0-dummy.m in Sources */,
+				0E510AA18D2102B373BCF3A6D0EF01F6 /* BBPortal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE96C680CEF11EC95018CF7B398A3EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59A7428039DBFA9C562F40614C4A6E2 /* DAFileMonitor-iOS11.0-dummy.m in Sources */,
+				D31463585FF3E11FD915D94D3D7B4F5F /* DAFileMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF85FF0A2A5E120D2A45CF403C6596A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87788BBE55D0B2233E8AC444CDEA9B1A /* Pods-SimpleApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE36B4B96B125A1304754E8FCA981578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E53F65E2BF2A7BEF0AC7330833FBD9E /* Pods-SimpleAppBroadCastUploadExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F5D4483CA8DAFBE8145C9BC4DF66B3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DAFileMonitor-iOS12.0";
+			target = 58A628AECF882B3BB595BA135050370D /* DAFileMonitor-iOS12.0 */;
+			targetProxy = 56251B2127E000FE5DF289FDDEEB8795 /* PBXContainerItemProxy */;
+		};
+		35E97F7EDE7CD94954F1E9CC1A9CEEB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DAFileMonitor-iOS11.0";
+			target = 940EEFB97C17B91B261BE5FD7E7F4F9E /* DAFileMonitor-iOS11.0 */;
+			targetProxy = 44267697EDCB62DF08BBBDE94F3A8A4E /* PBXContainerItemProxy */;
+		};
+		6169D037116AD74F2DBE4C771C5FFF59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DAFileMonitor-iOS11.0";
+			target = 940EEFB97C17B91B261BE5FD7E7F4F9E /* DAFileMonitor-iOS11.0 */;
+			targetProxy = 184964D782BD83643D08CD3FB39ED544 /* PBXContainerItemProxy */;
+		};
+		830D041849A149649D3B82291D9628F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DAFileMonitor-iOS11.0";
+			target = 940EEFB97C17B91B261BE5FD7E7F4F9E /* DAFileMonitor-iOS11.0 */;
+			targetProxy = B9474519B57504F758E1901CF7936E35 /* PBXContainerItemProxy */;
+		};
+		9527F9CC1B05982B069E524FEFB589F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BBPortal-iOS11.0";
+			target = D7388E0AA880456B24A9FDD3D7AE7A04 /* BBPortal-iOS11.0 */;
+			targetProxy = 2F4B71239AC14EE0C81E16FF4B785A7B /* PBXContainerItemProxy */;
+		};
+		9689DA8E84513BF254B9445456895582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "DAFileMonitor-iOS12.0";
+			target = 58A628AECF882B3BB595BA135050370D /* DAFileMonitor-iOS12.0 */;
+			targetProxy = B57C4C1B57261D3D4B3E1576E0F159FF /* PBXContainerItemProxy */;
+		};
+		A844DC119BEA6C49116DA07DB7951BAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BBPortal-iOS12.0";
+			target = FA773BCFC4DA528DFE9E4C18BCCC878B /* BBPortal-iOS12.0 */;
+			targetProxy = E2EBD42BA98D267350161786FB146FF3 /* PBXContainerItemProxy */;
+		};
+		B322A0F1C4DE968DCD24F96F1EB227AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BBPortal-iOS12.0";
+			target = FA773BCFC4DA528DFE9E4C18BCCC878B /* BBPortal-iOS12.0 */;
+			targetProxy = FA5253940D3635B898F03D7DF1393616 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1014000CECEA67D42A171CD30F34616F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9BA85B26377767F0DC015953437DF85 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtensionSetupUI/Pods-SimpleAppBroadCastUploadExtensionSetupUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtensionSetupUI/Pods-SimpleAppBroadCastUploadExtensionSetupUI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1174B21BCDA8970334F84D963436CD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E0E82D2AEDFA54E6695A59719F05C0 /* BBPortal-iOS12.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BBPortal-iOS12.0/BBPortal-iOS12.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BBPortal-iOS12.0/BBPortal-iOS12.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BBPortal-iOS12.0/BBPortal-iOS12.0.modulemap";
+				PRODUCT_MODULE_NAME = BBPortal;
+				PRODUCT_NAME = BBPortal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		25EFBBF9693FF9A6CBD89D0B39F63D82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 654F110BDE166AC1678C87A96A871516 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtensionSetupUI/Pods-SimpleAppBroadCastUploadExtensionSetupUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtensionSetupUI/Pods-SimpleAppBroadCastUploadExtensionSetupUI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		426F7D1C2EFBEEF9B27A6E0A9AB0733A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E0E82D2AEDFA54E6695A59719F05C0 /* BBPortal-iOS12.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BBPortal-iOS12.0/BBPortal-iOS12.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BBPortal-iOS12.0/BBPortal-iOS12.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BBPortal-iOS12.0/BBPortal-iOS12.0.modulemap";
+				PRODUCT_MODULE_NAME = BBPortal;
+				PRODUCT_NAME = BBPortal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		49470FD5ED5EBD618ED53FB1A4B6F6BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4195ABF629F2B216238832B4150A80C8 /* Pods-SimpleAppBroadCastUploadExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtension/Pods-SimpleAppBroadCastUploadExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtension/Pods-SimpleAppBroadCastUploadExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		516DD01195554EC8B0546BD8A20EA8D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6078FDD0ED6792BC1C4D56C93CD9D1 /* DAFileMonitor-iOS12.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0.modulemap";
+				PRODUCT_MODULE_NAME = DAFileMonitor;
+				PRODUCT_NAME = DAFileMonitor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		607896813D01D9E97610E6D9133645DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68477F4F98925A68B241D6ACC072641F /* BBPortal-iOS11.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BBPortal-iOS11.0/BBPortal-iOS11.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BBPortal-iOS11.0/BBPortal-iOS11.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BBPortal-iOS11.0/BBPortal-iOS11.0.modulemap";
+				PRODUCT_MODULE_NAME = BBPortal;
+				PRODUCT_NAME = BBPortal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64497B6FE7AF5D9768D473A2FE16CB95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68477F4F98925A68B241D6ACC072641F /* BBPortal-iOS11.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BBPortal-iOS11.0/BBPortal-iOS11.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BBPortal-iOS11.0/BBPortal-iOS11.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BBPortal-iOS11.0/BBPortal-iOS11.0.modulemap";
+				PRODUCT_MODULE_NAME = BBPortal;
+				PRODUCT_NAME = BBPortal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		673016DA88B9D480B68BA0BE10B8E261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550508B8607E6702EA66937252041375 /* Pods-SimpleApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7A63CB1F1F94A217B0C5B6BEE43060B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DB16E169279C0C2B86BCB10333AEC5C /* DAFileMonitor-iOS11.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DAFileMonitor-iOS11.0/DAFileMonitor-iOS11.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DAFileMonitor-iOS11.0/DAFileMonitor-iOS11.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DAFileMonitor-iOS11.0/DAFileMonitor-iOS11.0.modulemap";
+				PRODUCT_MODULE_NAME = DAFileMonitor;
+				PRODUCT_NAME = DAFileMonitor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C3A366AE1E4342775764641421C3BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6078FDD0ED6792BC1C4D56C93CD9D1 /* DAFileMonitor-iOS12.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DAFileMonitor-iOS12.0/DAFileMonitor-iOS12.0.modulemap";
+				PRODUCT_MODULE_NAME = DAFileMonitor;
+				PRODUCT_NAME = DAFileMonitor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AF2F62331E7CE0AEB0771636E9FA8439 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F699CDBBA975CF4EC88880A3EBACDC09 /* Pods-SimpleAppExtension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleAppExtension/Pods-SimpleAppExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleAppExtension/Pods-SimpleAppExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DAA86B035C2BB37285BA4A98D737B0EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8239C16837D51497726EBEE5160158F7 /* Pods-SimpleAppExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleAppExtension/Pods-SimpleAppExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleAppExtension/Pods-SimpleAppExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DF47CBA365F227CBD4C25E937D5A8885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DB16E169279C0C2B86BCB10333AEC5C /* DAFileMonitor-iOS11.0.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DAFileMonitor-iOS11.0/DAFileMonitor-iOS11.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DAFileMonitor-iOS11.0/DAFileMonitor-iOS11.0-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DAFileMonitor-iOS11.0/DAFileMonitor-iOS11.0.modulemap";
+				PRODUCT_MODULE_NAME = DAFileMonitor;
+				PRODUCT_NAME = DAFileMonitor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E1E23A339998B67F1C5F71549131E0D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54D215CF7E844A54A55E8DE4A6E5E9B1 /* Pods-SimpleAppBroadCastUploadExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtension/Pods-SimpleAppBroadCastUploadExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleAppBroadCastUploadExtension/Pods-SimpleAppBroadCastUploadExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4917E948C065E04EA21696551D8A30B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C833587893D608F54F93F3F904D703F6 /* Pods-SimpleApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67795A63DBBF92B949E6A889D5B82466 /* Build configuration list for PBXNativeTarget "Pods-SimpleAppBroadCastUploadExtensionSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1014000CECEA67D42A171CD30F34616F /* Debug */,
+				25EFBBF9693FF9A6CBD89D0B39F63D82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E53A580B8C272C62DE02119EEDAB3D7 /* Build configuration list for PBXNativeTarget "Pods-SimpleAppBroadCastUploadExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E23A339998B67F1C5F71549131E0D9 /* Debug */,
+				49470FD5ED5EBD618ED53FB1A4B6F6BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B73B47368A70A920C74E70E212A44486 /* Build configuration list for PBXNativeTarget "Pods-SimpleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				673016DA88B9D480B68BA0BE10B8E261 /* Debug */,
+				F4917E948C065E04EA21696551D8A30B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C452AD9EB40C9B9A3EC1945A790F553E /* Build configuration list for PBXNativeTarget "BBPortal-iOS12.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426F7D1C2EFBEEF9B27A6E0A9AB0733A /* Debug */,
+				1174B21BCDA8970334F84D963436CD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7A6A6B1D77339BE2F0DE77DAAE68F76 /* Build configuration list for PBXNativeTarget "DAFileMonitor-iOS12.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3A366AE1E4342775764641421C3BC6 /* Debug */,
+				516DD01195554EC8B0546BD8A20EA8D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1FDB67C91B91DC74B842495219B72F6 /* Build configuration list for PBXNativeTarget "BBPortal-iOS11.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607896813D01D9E97610E6D9133645DA /* Debug */,
+				64497B6FE7AF5D9768D473A2FE16CB95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC844EC3A96D20EDCA160C0C79E70E9 /* Build configuration list for PBXNativeTarget "Pods-SimpleAppExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA86B035C2BB37285BA4A98D737B0EA /* Debug */,
+				AF2F62331E7CE0AEB0771636E9FA8439 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC8A56B50A0A0DC664F34CD8EDA61FED /* Build configuration list for PBXNativeTarget "DAFileMonitor-iOS11.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF47CBA365F227CBD4C25E937D5A8885 /* Debug */,
+				7A63CB1F1F94A217B0C5B6BEE43060B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
