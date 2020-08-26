@@ -36,7 +36,6 @@ class SampleHandler: RPBroadcastSampleHandler {
         let fileUrl = urlFolder.appendingPathComponent(videoName)
         self.videoOutputFullFileName = fileUrl.path
         
-        self.isRecordingVideo = true
         if fileUtil.fileExists(atPath: self.videoOutputFullFileName!) {
             fileUtil.removeItem(atPath: self.videoOutputFullFileName!)
         } else {
@@ -55,7 +54,7 @@ class SampleHandler: RPBroadcastSampleHandler {
         }
         
         validatefiles()
-        
+        self.isRecordingVideo = true
         DispatchQueue.main.async {
             let screenBounds = UIScreen.main.bounds.size
             let videoCompressionPropertys = [ AVVideoAverageBitRateKey: screenBounds.width * screenBounds.height * 10.1 ]
