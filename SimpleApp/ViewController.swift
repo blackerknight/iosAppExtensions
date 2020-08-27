@@ -102,16 +102,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapPlayVideo(_ sender: UIButton) {
-//        loadData()
-//        guard let videoURL = videoURL else { return }
-//        let player = AVPlayer(url: videoURL)
-//        let playerController = AVPlayerViewController()
-//        playerController.player = player
-//        self.present(playerController, animated: true) {
-//            player.play()
-//        }
-        
+        loadData()
+        guard let videoURL = videoURL else { return }
+        let player = AVPlayer(url: videoURL)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.present(playerController, animated: true) {
+            player.play()
+        }
+    }
+    
+    @IBAction func tapSendnotification(_ sender: UIButton) {
         scheduleGroupedNotifications()
+    }
+    
+    @IBAction func tapDeletenotification(_ sender: UIButton) {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+           var identifiers: [String] = []
+           for notification:UNNotificationRequest in notificationRequests {
+               if notification.identifier == "1FiveSecond" {
+                  identifiers.append(notification.identifier)
+               }
+           }
+           UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+        }
     }
     
 

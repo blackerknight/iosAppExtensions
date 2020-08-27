@@ -17,39 +17,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo record screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuR-wm-LY6">
-                                <rect key="frame" x="66.5" y="64" width="281" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" name="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo record screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEF-9h-hDn">
-                                <rect key="frame" x="5" y="430" width="404" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" name="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-DM-q2a">
-                                <rect key="frame" x="15" y="800" width="384" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" name="textColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVT-Ow-i3J"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-IG-Qif">
+                                <rect key="frame" x="0.0" y="44" width="414" height="246"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo record screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuR-wm-LY6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEF-9h-hDn">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" name="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSS-Ig-WIg">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="146"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-DM-q2a">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="Play">
+                                                    <color key="titleColor" name="textColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kVT-Ow-i3J"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-Sr-ODf">
+                                                <rect key="frame" x="0.0" y="52" width="414" height="42"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="send push">
+                                                    <color key="titleColor" name="textColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DoN-3Q-cvP"/>
+                                                    <action selector="tapSendnotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5IL-Ig-iHR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B3-4B-LMV">
+                                                <rect key="frame" x="0.0" y="104" width="414" height="42"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="delete push">
+                                                    <color key="titleColor" name="textColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapDeletenotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WCb-UR-RBX"/>
+                                                    <action selector="tapPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxD-x7-2gD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R2g-DM-q2a" secondAttribute="trailing" constant="15" id="Fy3-ed-iE2"/>
-                            <constraint firstItem="ZuR-wm-LY6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GoW-FG-zci"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEF-9h-hDn" secondAttribute="trailing" constant="5" id="Kza-Tm-eXR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R2g-DM-q2a" secondAttribute="bottom" constant="20" id="S7u-MK-HY1"/>
-                            <constraint firstItem="ZuR-wm-LY6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Trc-9A-v4M"/>
-                            <constraint firstItem="SEF-9h-hDn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UOM-9W-sbz"/>
-                            <constraint firstItem="R2g-DM-q2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gM0-MR-u80"/>
-                            <constraint firstItem="SEF-9h-hDn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="i9K-ax-O29"/>
+                            <constraint firstItem="HIz-IG-Qif" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1an-si-7q7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HIz-IG-Qif" secondAttribute="trailing" id="FW6-Tc-L8T"/>
+                            <constraint firstItem="HIz-IG-Qif" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ngk-YF-c7r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
