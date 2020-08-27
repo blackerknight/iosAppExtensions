@@ -20,6 +20,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        // Ask for Notification Permissions
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.sound, .alert, .badge]) { granted, _ in
+            DispatchQueue.main.async {
+                if granted {
+                    UIApplication.shared.registerForRemoteNotifications()
+                } else {
+                    // Handle error or not granted scenario
+                }
+            }
+        }
     }
     
     private func setup() {
@@ -90,13 +102,48 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tapPlayVideo(_ sender: UIButton) {
-        loadData()
-        guard let videoURL = videoURL else { return }
-        let player = AVPlayer(url: videoURL)
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        self.present(playerController, animated: true) {
-            player.play()
+//        loadData()
+//        guard let videoURL = videoURL else { return }
+//        let player = AVPlayer(url: videoURL)
+//        let playerController = AVPlayerViewController()
+//        playerController.player = player
+//        self.present(playerController, animated: true) {
+//            player.play()
+//        }
+        
+        scheduleGroupedNotifications()
+    }
+    
+
+    func scheduleGroupedNotifications() {
+        for i in 1...6 {
+            let notificationContent = UNMutableNotificationContent()
+            notificationContent.title = "Hello!"
+            notificationContent.body = "Do not forget the pizza!"
+            notificationContent.sound = UNNotificationSound.default
+
+            if i % 2 == 0 {
+                notificationContent.threadIdentifier = "Guerrix-Wife"
+                if #available(iOS 12.0, *) {
+                    notificationContent.summaryArgument = "your wife"
+                }
+            } else {
+                notificationContent.threadIdentifier = "Guerrix-Son"
+                if #available(iOS 12.0, *) {
+                    notificationContent.summaryArgument = "your son"
+                }
+            }
+
+            // Deliver the notification in five seconds.
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            // Schedule the notification.
+            let request = UNNotificationRequest(identifier: "\(i)FiveSecond", content: notificationContent, trigger: trigger)
+            let center = UNUserNotificationCenter.current()
+            center.add(request) { (error: Error?) in
+                if let theError = error {
+                    print(theError)
+                }
+            }
         }
     }
 }
