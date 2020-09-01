@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		030735E9A17892FCFDC5D106 /* Pods_SimpleAppBroadCastUploadExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2333DEDC88DAFF3BBBCE3A /* Pods_SimpleAppBroadCastUploadExtension.framework */; };
 		08CBDDF9D97019204EE522B4 /* Pods_SimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFAA48D9723AECF8F728F45 /* Pods_SimpleApp.framework */; };
+		6D08E2FB24FEC093006500AF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D08E2FA24FEC093006500AF /* GoogleService-Info.plist */; };
 		6D54890E24A63B7600EB8BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54890D24A63B7600EB8BAA /* AppDelegate.swift */; };
 		6D54891224A63B7600EB8BAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54891124A63B7600EB8BAA /* ViewController.swift */; };
 		6D54891524A63B7600EB8BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D54891324A63B7600EB8BAA /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		57BDA489A7401CA826526B9A /* Pods-SimpleAppExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppExtension.release.xcconfig"; path = "Target Support Files/Pods-SimpleAppExtension/Pods-SimpleAppExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5E388433BB5D0C6C0894A6B2 /* Pods_SimpleAppBroadCastUploadExtensionSetupUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleAppBroadCastUploadExtensionSetupUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6121DB07C6F02B26EC9B16A3 /* Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig"; path = "Target Support Files/Pods-SimpleAppBroadCastUploadExtensionSetupUI/Pods-SimpleAppBroadCastUploadExtensionSetupUI.release.xcconfig"; sourceTree = "<group>"; };
+		6D08E2FA24FEC093006500AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D54890A24A63B7600EB8BAA /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D54890D24A63B7600EB8BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D54891124A63B7600EB8BAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				6D5ECFED24F6C53C00AA9A19 /* Base */,
 				6DFDC7EF24ED978200715E18 /* SimpleApp.entitlements */,
 				6D54890D24A63B7600EB8BAA /* AppDelegate.swift */,
+				6D08E2FA24FEC093006500AF /* GoogleService-Info.plist */,
 				6D54891124A63B7600EB8BAA /* ViewController.swift */,
 				6D54891324A63B7600EB8BAA /* Main.storyboard */,
 				6D54891624A63B7D00EB8BAA /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 				6D54890824A63B7600EB8BAA /* Resources */,
 				6DFDC7EE24ED94FB00715E18 /* Embed App Extensions */,
 				929204BC771B3F4BCD504EBC /* [CP] Embed Pods Frameworks */,
+				6D08E2FC24FEC1F3006500AF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -393,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D54891A24A63B7D00EB8BAA /* LaunchScreen.storyboard in Resources */,
+				6D08E2FB24FEC093006500AF /* GoogleService-Info.plist in Resources */,
 				6D54891724A63B7D00EB8BAA /* Assets.xcassets in Resources */,
 				6D54891524A63B7600EB8BAA /* Main.storyboard in Resources */,
 			);
@@ -466,6 +471,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6D08E2FC24FEC1F3006500AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		6FC710D9597FCD9B9F7D18C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -738,6 +762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SimpleApp/SimpleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7XG3ZS46L8;
 				INFOPLIST_FILE = SimpleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

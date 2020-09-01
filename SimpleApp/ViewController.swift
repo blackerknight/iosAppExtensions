@@ -10,6 +10,8 @@ import ReplayKit
 import UIKit
 import AVKit
 import BBPortal
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     private let videoName: String = "videoRecordScreen.mp4"
@@ -128,6 +130,43 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func tapForceCrash(_ sender: UIButton) {
+        Crashlytics.crashlytics().setUserID("123456789")
+        
+        // Set int_key to 100.
+        Crashlytics.crashlytics().setCustomValue(100, forKey: "int_key")
+
+        // Set str_key to "hello".
+        Crashlytics.crashlytics().setCustomValue("hello", forKey: "str_key")
+        
+        //You can record non-fatal exceptions by recording NSError
+        Crashlytics.crashlytics().record(error: NSError(domain: "error domain", code: 0, userInfo: ["key": "value"]))
+        
+        
+        
+        let userInfo = [
+          NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
+          NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
+          NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Does this page exist?", comment: ""),
+          "ProductID": "123456",
+          "View": "MainView"
+        ]
+
+        let error = NSError.init(domain: NSCocoaErrorDomain,
+                                 code: -1001,
+                                 userInfo: userInfo)
+        
+        
+        Analytics.logEvent("button_Crash", parameters: [
+        "name": "test" as NSObject,
+        "full_text": "abcdefghi" as NSObject
+        ])
+        
+        Crashlytics.crashlytics().record(error: error)
+        
+        
+        fatalError()
+    }
 
     func scheduleGroupedNotifications() {
         for i in 1...6 {

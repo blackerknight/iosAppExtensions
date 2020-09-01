@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HIz-IG-Qif">
-                                <rect key="frame" x="0.0" y="44" width="414" height="246"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="298"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo record screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuR-wm-LY6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
@@ -33,7 +33,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSS-Ig-WIg">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="146"/>
+                                        <rect key="frame" x="0.0" y="100" width="414" height="198"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-DM-q2a">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
@@ -67,6 +67,18 @@
                                                 <connections>
                                                     <action selector="tapDeletenotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WCb-UR-RBX"/>
                                                     <action selector="tapPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxD-x7-2gD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7U-NC-QrI">
+                                                <rect key="frame" x="0.0" y="156" width="414" height="42"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="crash force">
+                                                    <color key="titleColor" name="textColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tapForceCrash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bG-nk-FCa"/>
+                                                    <action selector="tapPlayVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1T-zc-9zH"/>
+                                                    <action selector="tapSendnotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLa-PN-xDB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
